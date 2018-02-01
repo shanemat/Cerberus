@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="drawer_menu_timer">Stopky</string>
+    <string name="drawer_menu_story">Příběh</string>
+    <string name="drawer_menu_games">Minihry</string>
+    <string name="drawer_menu_results">Výsledky</string>
+    <string name="drawer_menu_team">Tým</string>
+    <string name="drawer_menu_settings">Nastavení</string>
+
+    <string name="drawer_image_description">Ikona v menu</string>
+</resources>
