@@ -1,10 +1,10 @@
 package cz.cvut.fit.android.cerberus.presentation
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
-import android.widget.Toast
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerAdapter
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerItem
@@ -43,7 +43,32 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onDrawerItemClicked(item: DrawerItem) {
-        // TODO add some meaningful fragment switching
-        Toast.makeText(this, resources.getText(item.textResourceID),Toast.LENGTH_SHORT).show()
+        val fragment = selectFragmentByPickedOption(item)
+        displayFragmentOnScreen(fragment!!)
+        closeDrawer()
+    }
+
+    private fun selectFragmentByPickedOption(item: DrawerItem): Fragment? {
+        return when (item.textResourceID) {
+            else -> null
+        }
+    }
+
+    private fun displayFragmentOnScreen(fragment: Fragment) {
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragmentFrame)
+
+        if (currentFragment == null) {
+            supportFragmentManager.beginTransaction()
+                    .add(R.id.fragmentFrame, fragment)
+                    .commit()
+        } else {
+            supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentFrame, fragment)
+                    .commit()
+        }
+    }
+
+    private fun closeDrawer() {
+        drawerLayout.closeDrawers()
     }
 }
