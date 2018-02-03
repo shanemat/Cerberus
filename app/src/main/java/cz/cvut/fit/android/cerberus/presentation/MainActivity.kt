@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             R.string.drawer_menu_games -> MiniGamesFragment.newInstance()
             R.string.drawer_menu_results -> ResultsFragment.newInstance()
             R.string.drawer_menu_team -> TeamFragment.newInstance()
+            R.string.drawer_menu_settings -> SettingsFragment.newInstance()
             else -> {
                 val optionName = resources.getString(item.textResourceID)
                 return DummyFragment.newInstance(optionName)
