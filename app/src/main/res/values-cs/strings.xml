@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cerberus</string>
+
+    <string name="unsupported_option">Bohužel, možnost \"%1$s\" není podporována!</string>
 </resources>

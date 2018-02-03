@@ -8,6 +8,8 @@ import android.widget.AdapterView
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerAdapter
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerItem
+import cz.cvut.fit.android.cerberus.presentation.dummy.DummyFragment
+import cz.cvut.fit.android.cerberus.presentation.story.StoryFragment
 import kotlinx.android.synthetic.main.a_drawer.*
 
 class MainActivity : AppCompatActivity() {
@@ -49,9 +51,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectFragmentByPickedOption(item: DrawerItem): Fragment? {
-        return when (item.textResourceID) {
-            else -> null
-        }
+        val optionName = resources.getString(item.textResourceID)
+        return DummyFragment.newInstance(optionName)
     }
 
     private fun displayFragmentOnScreen(fragment: Fragment) {
