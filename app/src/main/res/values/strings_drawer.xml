@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="drawer_menu_timer">Time watch</string>
     <string name="drawer_menu_story">Story</string>
     <string name="drawer_menu_games">Minigames</string>
     <string name="drawer_menu_results">Results</string>

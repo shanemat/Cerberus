@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
     private fun configureDrawerItems(): ArrayList<DrawerItem> {
         val items = ArrayList<DrawerItem>()
 
-        items.add(DrawerItem(R.drawable.ic_timer, R.string.drawer_menu_timer))
         items.add(DrawerItem(R.drawable.ic_story, R.string.drawer_menu_story))
         items.add(DrawerItem(R.drawable.ic_games, R.string.drawer_menu_games))
         items.add(DrawerItem(R.drawable.ic_results, R.string.drawer_menu_results))
