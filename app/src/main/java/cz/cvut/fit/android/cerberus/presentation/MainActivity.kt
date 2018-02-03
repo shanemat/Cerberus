@@ -10,6 +10,7 @@ import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerAdapter
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerItem
 import cz.cvut.fit.android.cerberus.presentation.dummy.DummyFragment
 import cz.cvut.fit.android.cerberus.presentation.minigames.MiniGamesFragment
+import cz.cvut.fit.android.cerberus.presentation.results.ResultsFragment
 import cz.cvut.fit.android.cerberus.presentation.story.StoryFragment
 import kotlinx.android.synthetic.main.a_drawer.*
 
@@ -55,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         return when (item.textResourceID) {
             R.string.drawer_menu_story -> StoryFragment.newInstance()
             R.string.drawer_menu_games -> MiniGamesFragment.newInstance()
+            R.string.drawer_menu_results -> ResultsFragment.newInstance()
             else -> {
                 val optionName = resources.getString(item.textResourceID)
                 return DummyFragment.newInstance(optionName)
