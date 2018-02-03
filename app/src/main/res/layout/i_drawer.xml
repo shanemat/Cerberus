@@ -14,8 +14,8 @@
     
     <ImageView
         android:id="@+id/iDrawerIcon"
-        android:layout_width="@dimen/icon_size_small"
-        android:layout_height="@dimen/icon_size_small"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
 
         android:contentDescription="@string/drawer_image_description"/>
 
@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
 
         android:layout_gravity="center"
+        android:gravity="center"
 
         android:textSize="@dimen/text_size_big"
         android:textStyle="bold"
