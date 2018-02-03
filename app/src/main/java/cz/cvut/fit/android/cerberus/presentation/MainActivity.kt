@@ -1,12 +1,13 @@
-package cz.cvut.fit.android.cerberus
+package cz.cvut.fit.android.cerberus.presentation
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
 import android.widget.Toast
-import cz.cvut.fit.android.cerberus.drawer.DrawerAdapter
-import cz.cvut.fit.android.cerberus.drawer.DrawerItem
+import cz.cvut.fit.android.cerberus.R
+import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerAdapter
+import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerItem
 import kotlinx.android.synthetic.main.a_drawer.*
 
 class MainActivity : AppCompatActivity() {

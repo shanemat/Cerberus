@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.drawer
+package cz.cvut.fit.android.cerberus.presentation.drawer
 
 import android.view.View
 import android.widget.ImageView

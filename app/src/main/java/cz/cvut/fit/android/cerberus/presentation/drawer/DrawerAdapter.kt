@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.drawer
+package cz.cvut.fit.android.cerberus.presentation.drawer
 
 import android.content.Context
 import android.view.LayoutInflater
