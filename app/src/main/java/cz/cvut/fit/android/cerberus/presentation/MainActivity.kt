@@ -51,8 +51,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectFragmentByPickedOption(item: DrawerItem): Fragment? {
-        val optionName = resources.getString(item.textResourceID)
-        return DummyFragment.newInstance(optionName)
+        return when (item.textResourceID) {
+            R.string.drawer_menu_story -> StoryFragment.newInstance()
+            else -> {
+                val optionName = resources.getString(item.textResourceID)
+                return DummyFragment.newInstance(optionName)
+            }
+        }
     }
 
     private fun displayFragmentOnScreen(fragment: Fragment) {
