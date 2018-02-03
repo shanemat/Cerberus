@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Cerberus</string>
+    <string name="app_name">Project: CERBERUS</string>
 
+    <string name="logo_description">Project logo</string>
     <string name="unsupported_option">Unfortunately, option \"%1$s\" is not supported!</string>
 </resources>

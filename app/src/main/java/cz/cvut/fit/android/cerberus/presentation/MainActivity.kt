@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.AdapterView
 import cz.cvut.fit.android.cerberus.R
+import cz.cvut.fit.android.cerberus.presentation.base.BaseFragment
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerAdapter
 import cz.cvut.fit.android.cerberus.presentation.drawer.DrawerItem
 import cz.cvut.fit.android.cerberus.presentation.dummy.DummyFragment
@@ -18,14 +19,19 @@ import kotlinx.android.synthetic.main.a_drawer.*
 
 class MainActivity : AppCompatActivity() {
 
-    //private val drawerToggle: ActionBarDrawerToggle = DrawerToggle(this, drawerLayout)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.a_drawer)
 
-        supportActionBar?.hide()
+        prepareBaseView()
         prepareDrawer()
+    }
+
+    private fun prepareBaseView() {
+        setContentView(R.layout.a_drawer)
+        supportActionBar?.hide()
+
+        val baseFragment = BaseFragment.newInstance()
+        displayFragmentOnScreen(baseFragment)
     }
 
     private fun prepareDrawer() {
@@ -50,11 +56,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun onDrawerItemClicked(item: DrawerItem) {
         val fragment = selectFragmentByPickedOption(item)
-        displayFragmentOnScreen(fragment!!)
+        displayFragmentOnScreen(fragment)
         closeDrawer()
     }
 
-    private fun selectFragmentByPickedOption(item: DrawerItem): Fragment? {
+    private fun selectFragmentByPickedOption(item: DrawerItem): Fragment {
         return when (item.textResourceID) {
             R.string.drawer_menu_story -> StoryFragment.newInstance()
             R.string.drawer_menu_games -> MiniGamesFragment.newInstance()
