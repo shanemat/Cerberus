@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="beginning_text">  Váš tým sedí ve výsadkovém letadle, které se řítí Alžírským vzdušným prostorem k místu určení. Pilot Vám rádiem oznamuje, že zbývá ještě zhruba pět minut do výsadku, když najednou celý letadlem otřese výbuch. Při pohledu ven zjišťujete, že pravé křídlo padá směrem k zemi po zásahu protileteckým granátem a Vaše letadlo nabírá podobný kurz. Všichni popadáte padáky a zahajujete předčasný výsadek. Pár vteřin po výskoku posledního člena zasahuje letadlo druhá střela a ono exploduje. Jak budete dál postupovat?</string>
+    <string name="beginning_answer_open_parachutes">Rozdělat padáky na poslední chvíli a riskovat nebezpečný dopad</string>
+    <string name="beginning_answer_wait_little_longer">Rozdělat padáky hned a riskovat otevřenou střelbu</string>
+</resources>
