@@ -2,6 +2,9 @@
 <resources>
     <string name="app_name">Project: CERBERUS</string>
 
+    <string name="back">Zpět</string>
+    <string name="forward">Pokračovat</string>
+
     <string name="logo_description">Logo projektu</string>
     <string name="unsupported_option">Bohužel, možnost \"%1$s\" není podporována!</string>
 </resources>

@@ -1,18 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
 
     android:orientation="vertical"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.44">
+
+        <TextView
+            android:id="@+id/storyTextView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="@dimen/standard_padding_big"
+
+            android:layout_gravity="center"
+            android:gravity="start"
+
+            android:textSize="@dimen/text_size_big"
+            tools:text="Testing story text"/>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/storyRoleTextView"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
 
         android:gravity="center"
 
-        android:text="Story fragment"/>
+        android:textSize="@dimen/text_size_big"
+        android:textStyle="bold|italic"
+        tools:text="Answering driver John"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.34">
+
+        <ListView
+            android:id="@+id/storyAnswersListView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:padding="@dimen/standard_padding_medium"
+
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12">
+        
+        <Button
+            android:id="@+id/storyBackButton"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+
+            android:paddingStart="@dimen/standard_padding_big"
+            android:paddingEnd="@dimen/standard_padding_big"
+            android:gravity="start|center_vertical"
+
+            android:drawableStart="@drawable/ic_back_arrow"
+            android:text="@string/back"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <ProgressBar
+            android:id="@+id/storyProgressBar"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+
+            android:padding="@dimen/standard_padding_medium"
+            android:layout_gravity="center"
+
+            tools:progress="60"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+        <Button
+            android:id="@+id/storyForwardButton"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+
+            android:paddingStart="@dimen/standard_padding_big"
+            android:paddingEnd="@dimen/standard_padding_big"
+            android:gravity="end|center_vertical"
+
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:text="@string/forward"
+            android:background="?android:attr/selectableItemBackground"/>
+
+
+    </LinearLayout>
 
 </LinearLayout>
