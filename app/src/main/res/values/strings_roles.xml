@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="role_poacher">poacher</string>
+    <string name="role_porter">porter</string>
+    <string name="role_driver">driver</string>
+    <string name="role_armed_escort">armed escort</string>
+    <string name="role_translator">translator</string>
+    <string name="role_paramedic">paramedic</string>
+    <string name="role_archaeologist">archaeologist</string>
+    <string name="role_chief">chief</string>
+    <string name="role_quartermaster">quartermaster</string>
+    <string name="role_bomb_expert">bomb expert</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="role_poacher">pytlák</string>
+    <string name="role_porter">portýr</string>
+    <string name="role_driver">řidič</string>
+    <string name="role_armed_escort">ozbrojený doprovod</string>
+    <string name="role_translator">překladatel</string>
+    <string name="role_paramedic">zdravotník</string>
+    <string name="role_archaeologist">archeolog</string>
+    <string name="role_chief">náčelník</string>
+    <string name="role_quartermaster">proviantní důstojník</string>
+    <string name="role_bomb_expert">pyrotechnik</string>
+</resources>
