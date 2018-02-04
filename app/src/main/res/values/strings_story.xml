@@ -2,4 +2,7 @@
 <resources>
     <string name="unknown_node_text">You have ventured out of story! Please go back!</string>
     <string name="unknown_node_answer">Go back</string>
+
+    <string name="error_no_answer">You have to select an answer</string>
+    <string name="role_text">Answering: %1$s %2$s</string>
 </resources>

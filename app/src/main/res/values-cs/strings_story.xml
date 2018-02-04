@@ -2,4 +2,7 @@
 <resources>
     <string name="unknown_node_text">Vycestovali jste mimo příběh! Prosím, vraťte se!</string>
     <string name="unknown_node_answer">Vrátit se</string>
+
+    <string name="error_no_answer">Musíte zvolit odpověď</string>
+    <string name="role_text">Odpovídá: %1$s %2$s</string>
 </resources>
