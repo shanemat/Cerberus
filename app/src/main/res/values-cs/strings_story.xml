@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_node_text">Vycestovali jste mimo příběh! Prosím, vraťte se!</string>
+    <string name="unknown_node_answer">Vrátit se</string>
+</resources>

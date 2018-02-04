@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="unknown_node_text">You have ventured out of story! Please go back!</string>
+    <string name="unknown_node_answer">Go back</string>
+</resources>
