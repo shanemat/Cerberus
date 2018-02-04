@@ -3,4 +3,8 @@
     <string name="beginning_text">  Your team is sitting in cloaked airplane heading through Algiers´ airspace towards the airdrop location. You are just receiving notification from your pilot through com, that ETA is approximately in five minutes, when the plane starts to shake. As you look outside the window, you can see the right wing of your plane falling down after being hit by antiaircraft gun and you quickly realise, that your plane is about to follow soon. Without a moment of hesitation you all grab your parachutes and start to jump out of the burning plane. A few seconds after the plane gets hit for the second time and it explodes. What are you going to do?</string>
     <string name="beginning_answer_open_parachutes">Wait with opening the parachutes for the last moment and risk crash</string>
     <string name="beginning_answer_wait_little_longer">Open parachutes immediately and risk open fire</string>
+
+    <string name="hard_landing_text">You are falling straight down and open your parachutes at the last possible moment. The landing was rough indeed, but this maneuver saved you from rain of bullets. Still, you need to get to the gear, which is stored in a guarded warehouse nearby. How will you approach the warehouse?</string>
+    <string name="hard_landing_go_straight">Go to warehouse right away to avoid being spotted by patrols</string>
+    <string name="hard_landing_create_strategy">Try to think about strategy before approaching to avoid potential ambush</string>
 </resources>
