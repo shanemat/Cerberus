@@ -7,6 +7,6 @@ import cz.cvut.fit.android.cerberus.R
 
 class DrawerItemHolder(convertView: View) {
 
-    var icon: ImageView = convertView.findViewById(R.id.iDrawerIcon)
-    var name: TextView = convertView.findViewById(R.id.iDrawerText)
+    var icon: ImageView = convertView.findViewById(R.id.iDrawerImageView)
+    var name: TextView = convertView.findViewById(R.id.iDrawerTextView)
 }

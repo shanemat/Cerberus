@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun prepareBaseView() {
         setContentView(R.layout.a_drawer)
-        supportActionBar?.hide()
 
         val baseFragment = BaseFragment.newInstance()
         displayFragmentOnScreen(baseFragment)
