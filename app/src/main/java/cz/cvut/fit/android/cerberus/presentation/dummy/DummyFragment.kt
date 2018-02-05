@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
-import kotlinx.android.synthetic.main.f_dummy.*
+import kotlinx.android.synthetic.main.f_main_dummy.*
 
 class DummyFragment internal constructor() : Fragment() {
 
@@ -35,7 +35,7 @@ class DummyFragment internal constructor() : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.f_dummy, container, false)
+        return inflater.inflate(R.layout.f_main_dummy, container, false)
     }
 
     override fun onStart() {

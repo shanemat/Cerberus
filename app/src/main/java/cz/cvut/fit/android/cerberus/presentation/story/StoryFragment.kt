@@ -11,7 +11,7 @@ import cz.cvut.fit.android.cerberus.business.StoryFactory
 import cz.cvut.fit.android.cerberus.presentation.story.answers.AnswerAdapter
 import cz.cvut.fit.android.cerberus.structures.story.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.chapters.first.Beginning
-import kotlinx.android.synthetic.main.f_story.*
+import kotlinx.android.synthetic.main.f_main_story.*
 
 class StoryFragment internal constructor() : Fragment() {
 
@@ -35,7 +35,7 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.f_story, container, false)
+        return inflater.inflate(R.layout.f_main_story, container, false)
     }
 
     override fun onStart() {

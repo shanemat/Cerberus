@@ -16,6 +16,6 @@ class PoacherGameFragment internal constructor() : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.f_poacher, container, false)
+        return inflater.inflate(R.layout.f_games_poacher, container, false)
     }
 }
