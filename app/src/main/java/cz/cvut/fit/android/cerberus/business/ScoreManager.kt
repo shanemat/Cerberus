@@ -6,7 +6,7 @@ object ScoreManager {
 
     fun isGameScored(role: PlayerRole): Boolean {
         // TODO implement actual check based on DB value
-        return false
+        return true
     }
 
     fun addStoryPoints(points: Int) {

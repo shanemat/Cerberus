@@ -11,4 +11,8 @@
     <string name="parachutes_text">Otevíráte padáky, což vyvolává zběsilou palbu Vaším směrem. Kulky létají vlevo, vpravo a většina z Vás dopadá na zem s prostřeleným padákem, někteří lehce postřeleni. Navíc měli nepřátelé dost času zaměřit Vaši současnou polohu. Stále je ovšem potřeba sehnat vybavení, které je uschováno v nedalekém skladišti. Jakým způsobem se přiblížíte?</string>
     <string name="parachutes_go_straight">Vyrazit přímo ke skladišti a vyhnout se nebezpečí nalezení hlídkou</string>
     <string name="parachutes_create_strategy">Nejprve promyslet strategii postupu a vyhnout se nebezpečí překvapení</string>
+
+    <string name="desert_ambush_text">Jen co všichni odhodí padáky, rozbíháte se přes duny směrem ke skladišti. Bez předchozího průzkumu terénu Vás ovšem za první dunou překvapí obranná kulometná hnízda. Ačkoliv se Vám nakonec podařilo přiblížit se až ke skladišti, Vaše neopatrnost si vyžádala velké množství munice a několik střelným ran. Nyní je potřeba infiltrovat obsazené skladiště a získat potřebné vybavení.</string>
+
+    <string name="poacher_call_out">Je čas povolat do akce specialistu v oboru – pytláku %2$s!</string>
 </resources>
