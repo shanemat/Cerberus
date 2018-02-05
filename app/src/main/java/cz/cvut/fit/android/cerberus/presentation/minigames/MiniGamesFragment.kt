@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.presentation.minigames.armedescort.ArmedEscortGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.driver.DriverGameActivity
+import cz.cvut.fit.android.cerberus.presentation.minigames.paramedic.ParamedicGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.poacher.PoacherGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.porter.PorterGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.translator.TranslatorGameActivity
 import kotlinx.android.synthetic.main.fp_games_armed_escort.*
 import kotlinx.android.synthetic.main.fp_games_driver.*
+import kotlinx.android.synthetic.main.fp_games_paramedic.*
 import kotlinx.android.synthetic.main.fp_games_poacher.*
 import kotlinx.android.synthetic.main.fp_games_porter.*
 import kotlinx.android.synthetic.main.fp_games_translator.*
@@ -41,6 +43,7 @@ class MiniGamesFragment internal constructor() : Fragment() {
         setUpDriverButton()
         setUpArmedEscortButton()
         setUpTranslatorButton()
+        setUpParamedicButton()
     }
 
     private fun setUpPoacherButton() {
@@ -75,6 +78,13 @@ class MiniGamesFragment internal constructor() : Fragment() {
         gamesTranslatorButton.setOnClickListener {
             val translatorIntent = TranslatorGameActivity.newIntent(this.activity!!)
             startActivity(translatorIntent)
+        }
+    }
+
+    private fun setUpParamedicButton() {
+        gamesParamedicButton.setOnClickListener {
+            val paramedicIntent = ParamedicGameActivity.newIntent(this.activity!!)
+            startActivity(paramedicIntent)
         }
     }
 }
