@@ -13,7 +13,7 @@ import cz.cvut.fit.android.cerberus.presentation.minigames.GamesFactory
 import cz.cvut.fit.android.cerberus.presentation.story.answers.AnswerAdapter
 import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
 import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
-import cz.cvut.fit.android.cerberus.structures.story.StoryNode
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.chapters.first.Beginning
 import kotlinx.android.synthetic.main.f_main_story.*
 
@@ -72,6 +72,7 @@ class StoryFragment internal constructor() : Fragment() {
     private fun setUpBackButton() {
         storyBackButton.setOnClickListener {
             changeStoryNode(currentStoryNode.previousID)
+            subtractPoints(currentStoryNode.awardedPoints)
         }
     }
 
@@ -92,6 +93,7 @@ class StoryFragment internal constructor() : Fragment() {
             startGame(role)
         } else {
             changeStoryNode(chosenAnswer.targetID)
+            addPoints(currentStoryNode.awardedPoints)
         }
     }
 
@@ -108,6 +110,14 @@ class StoryFragment internal constructor() : Fragment() {
         currentStoryNode = StoryFactory.getStoryNode(nextNodeID, currentNodeID)
 
         update()
+    }
+
+    private fun addPoints(points: Int) {
+        ScoreManager.addStoryPoints(points)
+    }
+
+    private fun subtractPoints(points: Int) {
+        ScoreManager.subtractStoryPoints(points)
     }
 
     private fun startGame(role: PlayerRole) {
