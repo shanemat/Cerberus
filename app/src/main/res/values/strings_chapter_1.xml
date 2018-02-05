@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="beginning_text">  Your team is sitting in cloaked airplane heading through Algiers´ airspace towards the airdrop location. You are just receiving notification from your pilot through com, that ETA is approximately in five minutes, when the plane starts to shake. As you look outside the window, you can see the right wing of your plane falling down after being hit by antiaircraft gun and you quickly realise, that your plane is about to follow soon. Without a moment of hesitation you all grab your parachutes and start to jump out of the burning plane. A few seconds after the plane gets hit for the second time and it explodes. What are you going to do?</string>
-    <string name="beginning_answer_open_parachutes">Wait with opening the parachutes for the last moment and risk crash</string>
-    <string name="beginning_answer_wait_little_longer">Open parachutes immediately and risk open fire</string>
+    <string name="beginning_text">Your team is sitting in cloaked airplane heading through Algiers´ airspace towards the airdrop location. You are just receiving notification from your pilot through com, that ETA is approximately in five minutes, when the plane starts to shake. As you look outside the window, you can see the right wing of your plane falling down after being hit by antiaircraft gun and you quickly realise, that your plane is about to follow soon. Without a moment of hesitation you all grab your parachutes and start to jump out of the burning plane. A few seconds after the plane gets hit for the second time and it explodes. What are you going to do?</string>
+    <string name="beginning_answer_wait_little_longer">Wait with opening the parachutes for the last moment and risk crash</string>
+    <string name="beginning_answer_open_parachutes">Open parachutes immediately and risk open fire</string>
 
     <string name="hard_landing_text">You are falling straight down and open your parachutes at the last possible moment. The landing was rough indeed, but this maneuver saved you from rain of bullets. Still, you need to get to the gear, which is stored in a guarded warehouse nearby. How will you approach the warehouse?</string>
     <string name="hard_landing_go_straight">Go to warehouse right away to avoid being spotted by patrols</string>
     <string name="hard_landing_create_strategy">Try to think about strategy before approaching to avoid potential ambush</string>
+
+    <string name="parachutes_text">You have opened your parachutes right away, which resolves into wild gunfire in your direction. The bullet storm is tearing everything in its way, but all of you were able to make, though some of you are lightly wounded. To make things worse, the enemy was most likely able to determine your current location. Nevertheless, you still need to recover gear, which is stored in a guarded warehouse nearby. How will you approach the warehouse?</string>
+    <string name="parachutes_go_straight">Go to warehouse right away to avoid being spotted by patrols</string>
+    <string name="parachutes_create_strategy">Try to think about strategy before approaching to avoid potential ambush</string>
 </resources>
