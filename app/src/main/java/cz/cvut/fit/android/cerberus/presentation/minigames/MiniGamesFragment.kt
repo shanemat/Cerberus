@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.presentation.minigames.poacher.PoacherGameActivity
+import cz.cvut.fit.android.cerberus.presentation.minigames.porter.PorterGameActivity
 import kotlinx.android.synthetic.main.fp_games_poacher.*
+import kotlinx.android.synthetic.main.fp_games_porter.*
 
 class MiniGamesFragment internal constructor() : Fragment() {
 
@@ -29,12 +31,20 @@ class MiniGamesFragment internal constructor() : Fragment() {
 
     private fun setUp() {
         setUpPoacherButton()
+        setUpPorterButton()
     }
 
     private fun setUpPoacherButton() {
         gamesPoacherButton.setOnClickListener {
             val poacherIntent = PoacherGameActivity.newIntent(this.activity!!)
             startActivity(poacherIntent)
+        }
+    }
+
+    private fun setUpPorterButton() {
+        gamesPorterButton.setOnClickListener {
+            val porterIntent = PorterGameActivity.newIntent(this.activity!!)
+            startActivity(porterIntent)
         }
     }
 }
