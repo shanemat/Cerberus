@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.presentation.minigames.archaeologist.ArchaeologistGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.armedescort.ArmedEscortGameActivity
+import cz.cvut.fit.android.cerberus.presentation.minigames.chief.ChiefGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.driver.DriverGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.paramedic.ParamedicGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.poacher.PoacherGameActivity
@@ -15,6 +16,7 @@ import cz.cvut.fit.android.cerberus.presentation.minigames.porter.PorterGameActi
 import cz.cvut.fit.android.cerberus.presentation.minigames.translator.TranslatorGameActivity
 import kotlinx.android.synthetic.main.fp_games_archaeologist.*
 import kotlinx.android.synthetic.main.fp_games_armed_escort.*
+import kotlinx.android.synthetic.main.fp_games_chief.*
 import kotlinx.android.synthetic.main.fp_games_driver.*
 import kotlinx.android.synthetic.main.fp_games_paramedic.*
 import kotlinx.android.synthetic.main.fp_games_poacher.*
@@ -47,6 +49,7 @@ class MiniGamesFragment internal constructor() : Fragment() {
         setUpTranslatorButton()
         setUpParamedicButton()
         setUpArchaeologistButton()
+        setUpChiefButton()
     }
 
     private fun setUpPoacherButton() {
@@ -95,6 +98,13 @@ class MiniGamesFragment internal constructor() : Fragment() {
         gamesArchaeologistButton.setOnClickListener {
             val archaeologistIntent = ArchaeologistGameActivity.newIntent(this.activity!!)
             startActivity(archaeologistIntent)
+        }
+    }
+
+    private fun setUpChiefButton() {
+        gamesChiefButton.setOnClickListener {
+            val chiefIntent = ChiefGameActivity.newIntent(this.activity!!)
+            startActivity(chiefIntent)
         }
     }
 }
