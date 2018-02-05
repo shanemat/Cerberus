@@ -10,10 +10,12 @@ import cz.cvut.fit.android.cerberus.presentation.minigames.armedescort.ArmedEsco
 import cz.cvut.fit.android.cerberus.presentation.minigames.driver.DriverGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.poacher.PoacherGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.porter.PorterGameActivity
+import cz.cvut.fit.android.cerberus.presentation.minigames.translator.TranslatorGameActivity
 import kotlinx.android.synthetic.main.fp_games_armed_escort.*
 import kotlinx.android.synthetic.main.fp_games_driver.*
 import kotlinx.android.synthetic.main.fp_games_poacher.*
 import kotlinx.android.synthetic.main.fp_games_porter.*
+import kotlinx.android.synthetic.main.fp_games_translator.*
 
 class MiniGamesFragment internal constructor() : Fragment() {
 
@@ -38,6 +40,7 @@ class MiniGamesFragment internal constructor() : Fragment() {
         setUpPorterButton()
         setUpDriverButton()
         setUpArmedEscortButton()
+        setUpTranslatorButton()
     }
 
     private fun setUpPoacherButton() {
@@ -65,6 +68,13 @@ class MiniGamesFragment internal constructor() : Fragment() {
         gamesArmedEscortButton.setOnClickListener {
             val armedEscortIntent = ArmedEscortGameActivity.newIntent(this.activity!!)
             startActivity(armedEscortIntent)
+        }
+    }
+
+    private fun setUpTranslatorButton() {
+        gamesTranslatorButton.setOnClickListener {
+            val translatorIntent = TranslatorGameActivity.newIntent(this.activity!!)
+            startActivity(translatorIntent)
         }
     }
 }
