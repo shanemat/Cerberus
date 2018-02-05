@@ -8,4 +8,16 @@ object ScoreManager {
         // TODO implement actual check based on DB value
         return false
     }
+
+    fun addStoryPoints(points: Int) {
+        // TODO implement actual calculation
+    }
+
+    fun subtractStoryPoints(points: Int) {
+        // TODO implement actual calculation
+    }
+
+    fun resetStoryPoints() {
+        // TODO implement points reset
+    }
 }
