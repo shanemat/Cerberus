@@ -34,13 +34,15 @@
 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1"
+        android:layout_weight="0.06"
 
         android:gravity="center"
+        android:background="@color/colorAccent"
 
         android:textSize="@dimen/text_size_big"
+        android:textColor="@color/color_white"
         android:textStyle="bold|italic"
-        tools:text="Answering driver John"/>
+        tools:text="Answering: driver John"/>
 
     <FrameLayout
         android:layout_width="match_parent"
