@@ -38,6 +38,10 @@
         <activity
             android:name=".presentation.minigames.translator.TranslatorGameActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".presentation.minigames.paramedic.ParamedicGameActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
