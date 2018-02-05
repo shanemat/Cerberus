@@ -7,8 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
+import cz.cvut.fit.android.cerberus.business.ScoreManager
 import cz.cvut.fit.android.cerberus.business.StoryFactory
+import cz.cvut.fit.android.cerberus.presentation.minigames.GamesFactory
 import cz.cvut.fit.android.cerberus.presentation.story.answers.AnswerAdapter
+import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
+import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.story.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.chapters.first.Beginning
 import kotlinx.android.synthetic.main.f_main_story.*
@@ -75,11 +79,40 @@ class StoryFragment internal constructor() : Fragment() {
         storyForwardButton.setOnClickListener {
             val chosenAnswer = answerAdapter.getChosenAnswer()
             if (chosenAnswer != null) {
-                changeStoryNode(chosenAnswer.targetID)
+                moveForward(chosenAnswer)
             } else {
-                Snackbar.make(it, R.string.error_no_answer, Snackbar.LENGTH_SHORT).show()
+                reportNoAnswerSelected(it)
             }
         }
+    }
+
+    private fun moveForward(chosenAnswer: StoryAnswer) {
+        val role = currentStoryNode.role
+        if (shouldStartGame(role)) {
+            startGame(role)
+        } else {
+            changeStoryNode(chosenAnswer.targetID)
+        }
+    }
+
+    private fun shouldStartGame(role: PlayerRole): Boolean {
+        return currentStoryNode.leadsToGame && !ScoreManager.isGameScored(role)
+    }
+
+    private fun reportNoAnswerSelected(view: View) {
+        Snackbar.make(view, R.string.error_no_answer, Snackbar.LENGTH_SHORT).show()
+    }
+
+    private fun changeStoryNode(nextNodeID: Long) {
+        val currentNodeID = currentStoryNode.ID
+        currentStoryNode = StoryFactory.getStoryNode(nextNodeID, currentNodeID)
+
+        update()
+    }
+
+    private fun startGame(role: PlayerRole) {
+        val gameIntent = GamesFactory.getGameIntent(this.activity!!, role)
+        startActivity(gameIntent)
     }
 
     private fun update() {
@@ -95,7 +128,7 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     private fun updateRoleText() {
-        val roleName = currentStoryNode.currentRole.getName(this.activity!!)
+        val roleName = currentStoryNode.role.getName(this.activity!!)
         val baseName = getBaseName()
         storyRoleTextView.text = resources.getString(R.string.role_text, roleName, baseName)
     }
@@ -133,12 +166,5 @@ class StoryFragment internal constructor() : Fragment() {
     private fun getBaseName(): String {
         // TODO add base name retrieval
         return "Unknown"
-    }
-
-    private fun changeStoryNode(nextNodeID: Long) {
-        val currentNodeID = currentStoryNode.ID
-        currentStoryNode = StoryFactory.getStoryNode(nextNodeID, currentNodeID)
-
-        update()
     }
 }
