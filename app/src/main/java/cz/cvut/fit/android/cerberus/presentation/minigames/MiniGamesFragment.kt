@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
+import cz.cvut.fit.android.cerberus.presentation.minigames.poacher.PoacherGameActivity
+import kotlinx.android.synthetic.main.fp_games_poacher.*
 
 class MiniGamesFragment internal constructor() : Fragment() {
 
@@ -17,5 +19,22 @@ class MiniGamesFragment internal constructor() : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.f_mini_games, container, false)
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        setUp()
+    }
+
+    private fun setUp() {
+        setUpPoacherButton()
+    }
+
+    private fun setUpPoacherButton() {
+        gamesPoacherButton.setOnClickListener {
+            val poacherIntent = PoacherGameActivity.newIntent(this.activity!!)
+            startActivity(poacherIntent)
+        }
     }
 }
