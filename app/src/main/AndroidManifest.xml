@@ -46,6 +46,10 @@
         <activity
             android:name=".presentation.minigames.archaeologist.ArchaeologistGameActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".presentation.minigames.chief.ChiefGameActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
