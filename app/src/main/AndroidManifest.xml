@@ -54,6 +54,10 @@
         <activity
             android:name=".presentation.minigames.quartermaster.QuartermasterGameActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".presentation.minigames.bombexpert.BombExpertGameActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
