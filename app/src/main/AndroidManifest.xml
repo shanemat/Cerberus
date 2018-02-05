@@ -30,6 +30,10 @@
         <activity
             android:name=".presentation.minigames.driver.DriverGameActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".presentation.minigames.armedescort.ArmedEscortGameActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
