@@ -7,8 +7,9 @@ import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
 abstract class StoryNode(val ID: Long,
                          val previousID: Long,
                          private val textResourceID: Int,
-                         val currentRole: PlayerRole,
-                         val progress: Int) {
+                         val role: PlayerRole,
+                         val progress: Int,
+                         val leadsToGame: Boolean) {
 
     private val baseName = getBaseName()
 
