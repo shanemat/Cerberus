@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
+import cz.cvut.fit.android.cerberus.presentation.minigames.driver.DriverGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.poacher.PoacherGameActivity
 import cz.cvut.fit.android.cerberus.presentation.minigames.porter.PorterGameActivity
+import kotlinx.android.synthetic.main.fp_games_driver.*
 import kotlinx.android.synthetic.main.fp_games_poacher.*
 import kotlinx.android.synthetic.main.fp_games_porter.*
 
@@ -32,6 +34,7 @@ class MiniGamesFragment internal constructor() : Fragment() {
     private fun setUp() {
         setUpPoacherButton()
         setUpPorterButton()
+        setUpDriverButton()
     }
 
     private fun setUpPoacherButton() {
@@ -45,6 +48,13 @@ class MiniGamesFragment internal constructor() : Fragment() {
         gamesPorterButton.setOnClickListener {
             val porterIntent = PorterGameActivity.newIntent(this.activity!!)
             startActivity(porterIntent)
+        }
+    }
+
+    private fun setUpDriverButton() {
+        gamesDriverButton.setOnClickListener {
+            val driverIntent = DriverGameActivity.newIntent(this.activity!!)
+            startActivity(driverIntent)
         }
     }
 }
