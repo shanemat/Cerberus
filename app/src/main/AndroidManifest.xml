@@ -26,6 +26,10 @@
         <activity
             android:name=".presentation.minigames.porter.PorterGameActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".presentation.minigames.driver.DriverGameActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
