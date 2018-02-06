@@ -18,5 +18,7 @@
 
     <string name="act_first_think_later_text">Po odhození padáků vyrážíte přímo ke skladišti. Cestou potkáváte dvě kulometná hnízda, jejichž posádka se Vás ovšem nejspíš vydala hledat – jaké štěstí. Díky tomu se celkem bez problému dostáváte až ke skladišti. Nyní je potřeba infiltrovat obsazené skladiště a získat potřebné vybavení.</string>
     
+    <string name="patrol_ambush_text">Zasedáte do kroužku s cílem vymyslet nejlepší strategii a vylízat se ze střelných ran, když pár metrů od Vás začnou nadskakovat kupičky písku od kulek zpoza duny vybíhající nepřátelské jednotky. Za cenu tří dýmovnic a pár dalších střelných ran se Vám podaří prchnout až ke skladišti a cestou setřást své pronásledovatele. Nyní je potřeba infiltrovat obsazené skladiště a získat potřebné vybavení.</string>
+    
     <string name="poacher_call_out">Je čas povolat do akce specialistu v oboru – pytláku %2$s!</string>
 </resources>

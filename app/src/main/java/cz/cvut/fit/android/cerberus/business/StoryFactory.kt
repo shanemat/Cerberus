@@ -14,6 +14,7 @@ object StoryFactory {
             3L -> DesertAmbush(previousID)
             4L -> ScoutingPaysOff(previousID)
             5L -> ActFirstThinkLater(previousID)
+            6L -> PatrolAmbush(previousID)
             else -> UnknownNode(previousID)
         }
     }
