@@ -13,7 +13,10 @@
     <string name="parachutes_create_strategy">Try to think about strategy before approaching to avoid potential ambush</string>
 
     <string name="desert_ambush_text">Once you all get rid of parachutes, you start to run towards the warehouse. Deciding scouting ahead would be waste of time you run over the first dune to find yourself facing two machine gun nests. You manage to disable them and approach the warehouse, but this recklessness cost you few gunshot wounds and a whole lot of ammo. Now you need to infiltrate the heavily guarded warehouse to obtain your gear.</string>
-    <string name="scouting_pays_off">You send out two members of your team to scout your surroundings, while you are trying to come up with strategy. After a while the scouts return reporting two machine gun nests just over the nearest dune. With the moment of surprise on your side, you have no problem taking care of them and approaching the warehouse. Now you need to infiltrate the heavily guarded warehouse to obtain your gear.</string>
+
+    <string name="scouting_pays_off_text">You send out two members of your team to scout your surroundings, while you are trying to come up with strategy. After a while the scouts return reporting two machine gun nests just over the nearest dune. With the moment of surprise on your side, you have no problem taking care of them and approaching the warehouse. Now you need to infiltrate the heavily guarded warehouse to obtain your gear.</string>
+
+    <string name="act_first_think_later_text">Once you all get rid of parachutes, you start to run towards the warehouse. On your way you find two abandoned machine gun nests. Luckily for you, the soldiers operating them are away, most likely looking for you. Thanks to this fortunate event, you have no problem approaching the warehouse. Now you need to infiltrate the heavily guarded warehouse to obtain your gear.</string>
 
     <string name="poacher_call_out">It is time to call the professionals - poacher %2$d, it\'s your time!</string>
 </resources>
