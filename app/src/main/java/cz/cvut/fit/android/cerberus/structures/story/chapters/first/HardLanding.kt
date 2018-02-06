@@ -9,7 +9,7 @@ import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
 
 class HardLanding(previousID: Long)
     : StoryNode(StoryLinks(1, previousID, 3, false),
-                StoryResources(R.string.hard_landing_text, PlayerRole.POACHER, 1)) {
+                StoryResources(R.string.hard_landing_text, PlayerRole.POACHER, awardedPoints = 1)) {
 
     init {
         addAnswer(StoryAnswer(R.string.hard_landing_go_straight, role, 3))

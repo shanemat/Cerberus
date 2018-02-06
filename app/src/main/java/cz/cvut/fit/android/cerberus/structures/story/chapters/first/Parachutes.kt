@@ -9,7 +9,7 @@ import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
 
 class Parachutes(previousID: Long)
     : StoryNode(StoryLinks(2, previousID, 3, false),
-                StoryResources(R.string.parachutes_text, PlayerRole.POACHER, 0)) {
+                StoryResources(R.string.parachutes_text, PlayerRole.POACHER, awardedPoints = 0)) {
 
     init {
         addAnswer(StoryAnswer(R.string.parachutes_go_straight, role, 5))

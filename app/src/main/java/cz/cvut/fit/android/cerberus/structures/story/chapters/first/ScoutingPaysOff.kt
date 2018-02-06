@@ -9,7 +9,7 @@ import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
 
 class ScoutingPaysOff(previousID: Long)
     : StoryNode(StoryLinks(4, previousID, 7, true),
-                StoryResources(R.string.scouting_pays_off_text, PlayerRole.POACHER, 1)) {
+                StoryResources(R.string.scouting_pays_off_text, PlayerRole.POACHER, awardedPoints = 1)) {
 
     init {
         addAnswer(StoryAnswer(R.string.poacher_call_out, PlayerRole.POACHER, 7))

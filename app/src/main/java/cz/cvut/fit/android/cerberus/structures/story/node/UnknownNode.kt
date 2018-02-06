@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.structures.story
+package cz.cvut.fit.android.cerberus.structures.story.node
 
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
@@ -9,7 +9,7 @@ import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
 
 class UnknownNode(previousID: Long)
     : StoryNode(StoryLinks(-1, previousID, 0, false),
-                StoryResources(R.string.unknown_node_text, PlayerRole.POACHER, 0)) {
+                StoryResources(R.string.unknown_node_text, PlayerRole.POACHER, awardedPoints = 0)) {
 
     init {
         addAnswer(StoryAnswer(R.string.unknown_node_answer, PlayerRole.POACHER, 0))

@@ -15,6 +15,7 @@ abstract class StoryNode(links: StoryLinks, resources: StoryResources) {
     val awardedPoints = resources.awardedPoints
 
     private val textResourceID = resources.textResourceID
+    private val textRole = resources.textRole
     private val baseName = getBaseName()
 
     var answers: ArrayList<StoryAnswer> = ArrayList()
@@ -29,7 +30,7 @@ abstract class StoryNode(links: StoryLinks, resources: StoryResources) {
     }
 
     private fun getBaseName(): String {
-        // TODO add base name retrieval
+        // TODO add base name retrieval - based on TEXT ROLE!!!
         return "Unknown"
     }
 }
@@ -41,4 +42,5 @@ data class StoryLinks(val ID: Long,
 
 data class StoryResources(val textResourceID: Int,
                           val role: PlayerRole,
+                          val textRole: PlayerRole = role,
                           val awardedPoints: Int)

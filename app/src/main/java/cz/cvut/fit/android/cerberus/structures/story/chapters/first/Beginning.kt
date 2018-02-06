@@ -9,7 +9,7 @@ import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
 
 class Beginning()
     : StoryNode(StoryLinks(0, 0, 0, false),
-                StoryResources(R.string.beginning_text, PlayerRole.POACHER, 0)) {
+                StoryResources(R.string.beginning_text, PlayerRole.POACHER, awardedPoints = 0)) {
 
     init {
         addAnswer(StoryAnswer(R.string.beginning_answer_wait_little_longer, role, 1))
