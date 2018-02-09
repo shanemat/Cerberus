@@ -6,6 +6,7 @@ import cz.cvut.fit.android.cerberus.structures.story.chapters.first.*
 import cz.cvut.fit.android.cerberus.structures.story.chapters.second.GunsBlazing
 import cz.cvut.fit.android.cerberus.structures.story.chapters.second.PoacherFailure
 import cz.cvut.fit.android.cerberus.structures.story.chapters.second.PoacherSuccess
+import cz.cvut.fit.android.cerberus.structures.story.chapters.second.SneakySneaky
 
 object StoryFactory {
 
@@ -22,6 +23,7 @@ object StoryFactory {
             7L -> PoacherSuccess(previousID)
             8L -> PoacherFailure(previousID)
             9L -> GunsBlazing(previousID)
+            10L -> SneakySneaky(previousID)
 
             else -> UnknownNode(previousID)
         }

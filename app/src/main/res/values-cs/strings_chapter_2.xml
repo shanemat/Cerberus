@@ -7,5 +7,9 @@
 
     <string name="guns_blazing_text">Po zahájení přímého útoku na základnu zjišťujete, že nepřátel je podstatně více, než jste čekali, a po krátké chvíli jste nuceni stáhnout se do jednoho objektu poblíž brány areálu. V průběhu relativně přátelské výměny kulek a granátů objevujete v budově mechanismus na ovládání brány areálu. Ten ovšem bez speciálního klíče ovládat nepůjde, což je docela škoda, protože projíždět zavřenou bránou je docela nepříjemná kratochvíle. Leda! Leda byste měli v týmu někoho, kdo si dokáže poradit se složitými obvody a záludnými porty.</string>
 
+    <string name="sneaky_sneaky_text">Nenápadně se přesouváte k hranici areálu, prostříháváte plot a pronikáte dovnitř. Okamžitě se ovšem kryjete v nejbližším objektu nalézajícím se poblíž brány areálu, neboť jste byli nejspíš zpozorováni procházející hlídkou. V následujících vteřinách zklidňujete dech a přemýšlíte, co udělat s přicházející hlídkou.</string>
+    <string name="sneaky_sneaky_come_inside">Vyčkat, až dojdou dovnitř objektu, a teprve pak je zneškodnit – riskovat přímé ohrožení</string>
+    <string name="sneaky_sneaky_shoot_asap">Počkat, až se přiblíží na dostřel, a oba je zastřelit – riskovat spuštění poplachu</string>
+
     <string name="porter_call_out">Tohle portýr %1$s zvládne levou zadní</string>
 </resources>
