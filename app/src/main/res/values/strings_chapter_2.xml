@@ -5,11 +5,13 @@
     <string name="poacher_game_guns_blazing">It\'s just a small group, we will go in guns blazing!</string>
     <string name="poacher_game_sneaky_sneaky">There can be far more armed guys. Let\'s try to sneak inside…</string>
 
-    <string name="guns_blazing_text">After you start direct attack on the warehouse you find out, that there are much more enemy troops than you expected, and after a short while, you are forced to take cover in a building near gate to the warehouse area. During relatively friendly exchange of bullets and grenades you find the mechanism for opening the gate of area. However, it cannot be oeprated without a special access card, which is kinda pitiful, because driving through closed gate is quite unpleasant hobby. Unless! Unless you have someone in your team, who can handle difficult circuits and captious ports.</string>
+    <string name="guns_blazing_text">After you start direct attack on the warehouse you find out, that there are much more enemy troops than you expected, and after a short while, you are forced to take cover in a building near gate to the warehouse area. During relatively friendly exchange of bullets and grenades you find the mechanism for opening the gate of area. However, it cannot be operated without a special access card, which is kinda pitiful, because driving through closed gate is quite unpleasant hobby. Unless! Unless you have someone in your team, who can handle difficult circuits and captious ports.</string>
 
     <string name="sneaky_sneaky_text">You successfully approach the warehouse area, cut the fence and go inside. However, you are immediately forced to hide in nearest building near the gate to the area, because you were most likely spotted by passing patrol. In following seconds, you calm your breath and think, what to do with approaching patrol.</string>
     <string name="sneaky_sneaky_come_inside">Let them come inside the building and then try to eliminate them - risk direct fight</string>
     <string name="sneaky_sneaky_shoot_asap">Wait until they get to range and then shoot both of them - risk raising the alarm</string>
+
+    <string name="come_inside_text">With tension equal to one of suspenders being tensed over half-meter belly you await coming of the patrol. As soon as the door opens, you silently eliminate both patrolling soldiers. Although you haven\'t raised the alarm yet, the others will surely start to miss the patrol shortly. During more thorough exploration of the building you are in, you find the mechanism for opening the gate of area. However, it cannot be operated without a special access card, which is kinda pitiful, because driving through closed gate is quite unpleasant hobby. Unless! Unless you have someone in your team, who can handle difficult circuits and captious ports.</string>
 
     <string name="porter_call_out">This is a child\'s play for the porter %1$s</string>
 </resources>

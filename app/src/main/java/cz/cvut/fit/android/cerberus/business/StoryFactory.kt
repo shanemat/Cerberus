@@ -3,10 +3,7 @@ package cz.cvut.fit.android.cerberus.business
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.UnknownNode
 import cz.cvut.fit.android.cerberus.structures.story.chapters.first.*
-import cz.cvut.fit.android.cerberus.structures.story.chapters.second.GunsBlazing
-import cz.cvut.fit.android.cerberus.structures.story.chapters.second.PoacherFailure
-import cz.cvut.fit.android.cerberus.structures.story.chapters.second.PoacherSuccess
-import cz.cvut.fit.android.cerberus.structures.story.chapters.second.SneakySneaky
+import cz.cvut.fit.android.cerberus.structures.story.chapters.second.*
 
 object StoryFactory {
 
@@ -24,6 +21,7 @@ object StoryFactory {
             8L -> PoacherFailure(previousID)
             9L -> GunsBlazing(previousID)
             10L -> SneakySneaky(previousID)
+            11L -> ComeInside(previousID)
 
             else -> UnknownNode(previousID)
         }
