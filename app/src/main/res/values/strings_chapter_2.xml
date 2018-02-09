@@ -4,4 +4,8 @@
     <string name="poacher_game_failure_text">After a short while you see the poacher alongside the half-empty poach being thrown out of the main gate of the warehouse. The poacher %1$s limps towards you and reports, that there is a truck in the area of warehouse, which - as you all agreed - is bit better way of transport over desert than going by foot. However, you´ve noticed small group of armed forces patrolling around the warehouse. What approach will you choose to get inside?</string>
     <string name="poacher_game_guns_blazing">It\'s just a small group, we will go in guns blazing!</string>
     <string name="poacher_game_sneaky_sneaky">There can be far more armed guys. Let\'s try to sneak inside…</string>
+
+    <string name="guns_blazing_text">After you start direct attack on the warehouse you find out, that there are much more enemy troops than you expected, and after a short while, you are forced to take cover in a building near gate to the warehouse area. During relatively friendly exchange of bullets and grenades you find the mechanism for opening the gate of area. However, it cannot be oeprated without a special access card, which is kinda pitiful, because driving through closed gate is quite unpleasant hobby. Unless! Unless you have someone in your team, who can handle difficult circuits and captious ports.</string>
+
+    <string name="porter_call_out">This is a child\'s play for the porter %1$s</string>
 </resources>
