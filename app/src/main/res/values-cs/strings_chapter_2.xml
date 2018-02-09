@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="poacher_game_success_text">Po krátké chvíli vidíte, jak pytlák %1$s přelézá plot skladiště s nadutým pytlem vybavení na rameni. Po příchodu k vám hlásí, že v areálu skladiště stojí nákladní auto, které – jak jste se všichni jednomyslně shodli – je pro transport po poušti lehce vhodnější než pěší chůze. Areál je ovšem dle pozorování hlídán nevelkou skupinou ozbrojených jednotek. Jakým způsobem se pokusíte proniknout dovnitř? </string>
+    
+    <string name="poacher_game_guns_blazing">Je jich jenom pár, tak se prostřílíme!</string>
+    <string name="poacher_game_sneaky_sneaky">Může jich tam být podstatně víc, raději se dovnitř zkusíme proplížit!</string>
+
+</resources>

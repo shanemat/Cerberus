@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="poacher_game_success_text">After a short while you see the poacher %1$s climb over the fence of warehouse with a loaded poach on the shoulder. According to poacher´s observation, there is a truck in the area of warehouse, which - as you all agreed - is bit better way of transport over desert than going by foot. However, you´ve noticed small group of armed forces patrolling around the warehouse. What approach will you choose to get inside?</string>
+
+    <string name="poacher_game_guns_blazing">It\'s just a small group, we will go in guns blazing!</string>
+    <string name="poacher_game_sneaky_sneaky">There can be far more armed guys. Let\'s try to sneak inside…</string>
+</resources>
