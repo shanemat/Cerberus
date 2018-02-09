@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="porter_game_success_text">S posledním zasazeným konektorem se systém rozbíhá a brána areálu se otevírá. Portýr %1$s je naštěstí mistr svého oboru, takže během otvírání brány navíc spustil falešný poplach na opačné straně areálu, což vedlo ke snížení frekvence střel na Váš současný úkryt. Nyní je potřeba přemístit se do nákladního auta a areál co nejrychleji opustit. To však jde zařídit hned několika způsoby. Který zvolíte Vy?</string>
+
+    <string name="porter_game_pedal_to_the_metal">Není moc, co vymýšlet. Hromadně naběhnout do náklaďáku a s pedálem na podlaze odjet z areálu</string>
+    <string name="porter_game_board_inside">Krýt řidiče, zatímco poběží k náklaďáku, následně zastaví u brány, nasednout a odjet</string>
+    <string name="porter_game_board_outside">Krýt řidiče, zatímco poběží k náklaďáku, následně zastaví mimo areál, prolézt plotem, nasednout a odjet</string>
+</resources>

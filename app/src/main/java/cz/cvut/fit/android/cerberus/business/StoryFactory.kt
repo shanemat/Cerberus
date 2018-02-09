@@ -4,6 +4,7 @@ import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.UnknownNode
 import cz.cvut.fit.android.cerberus.structures.story.chapters.first.*
 import cz.cvut.fit.android.cerberus.structures.story.chapters.second.*
+import cz.cvut.fit.android.cerberus.structures.story.chapters.third.PorterGameSuccess
 
 object StoryFactory {
 
@@ -25,6 +26,8 @@ object StoryFactory {
             10L -> SneakySneaky(previousID)
             11L -> ComeInside(previousID)
             12L -> ShootASAP(previousID)
+
+            13L -> PorterGameSuccess(previousID)
 
             else -> UnknownNode(previousID)
         }

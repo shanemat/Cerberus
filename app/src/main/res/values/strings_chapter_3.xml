@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="porter_game_success_text">With last remaining connector in its place the mechanism starts up and the gate to the area opens. Fortunately, porter %1$s is professional and was able to raise a false alarm on the other side of the area. That resulted in lowering of frequency of bullet staccato on your current hideout. Now you need to get to the truck and leave the area as soon as possible. There are several ways, how to do that, which one will you choose?</string>
+
+    <string name="porter_game_pedal_to_the_metal">There is no time to think. Let\'s get to the truck and get the pedal to the metal</string>
+    <string name="porter_game_board_inside">Cover the driver, he will get the truck to the gate, where we will board, then leave</string>
+    <string name="porter_game_board_outside">Cover the driver, he will get the truck outside the area, go through the fence, board, then leave</string>
+</resources>
