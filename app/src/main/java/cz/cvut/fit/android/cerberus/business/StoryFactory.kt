@@ -10,6 +10,7 @@ object StoryFactory {
     fun getStoryNode(ID: Long, previousID: Long): StoryNode {
         return when (ID) {
             0L -> Beginning()
+
             1L -> HardLanding(previousID)
             2L -> Parachutes(previousID)
             3L -> DesertAmbush(previousID)
@@ -19,9 +20,11 @@ object StoryFactory {
 
             7L -> PoacherSuccess(previousID)
             8L -> PoacherFailure(previousID)
+
             9L -> GunsBlazing(previousID)
             10L -> SneakySneaky(previousID)
             11L -> ComeInside(previousID)
+            12L -> ShootASAP(previousID)
 
             else -> UnknownNode(previousID)
         }

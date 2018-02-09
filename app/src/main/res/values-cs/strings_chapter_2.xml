@@ -13,5 +13,7 @@
 
     <string name="come_inside_text">Napjatí jak kšandy přes půlmetrové panděro vyčkáváte na příchod hlídky. Jen, co zaklapnou dveře, vrháte se na oba hlídkující a tiše je zneškodňujete. Ačkoliv jste doposud nevyvolali žádný poplach, během chvíle začne být nepřítomnost hlídky podezřelá. Při bližším prohledání objektu objevujete mechanismus na ovládání brány areálu. Ten ovšem bez speciálního klíče ovládat nepůjde, což je docela škoda, protože projíždět zavřenou bránou je docela nepříjemná kratochvíle. Leda! Leda byste měli v týmu někoho, kdo si dokáže poradit se složitými obvody a záludnými porty.</string>
 
+    <string name="shoot_asap_text">Skrytí za skříněmi s nářadím odjišťujete zbraně a jen, co se hlavy hlídkujících objevují v hledáčku, tisknete spoušť. Odpovědí na dva výstřely je ohlušující řev sirény následovaný sprškou kulek do plechového obložení budovy, v níž se nacházíte. V průběhu relativně přátelské výměny kulek a granátů objevujete v budově mechanismus na ovládání brány areálu. Ten ovšem bez speciálního klíče ovládat nepůjde, což je docela škoda, protože projíždět zavřenou bránou je docela nepříjemná kratochvíle. Leda! Leda byste měli v týmu někoho, kdo si dokáže poradit se složitými obvody a záludnými porty.</string>
+
     <string name="porter_call_out">Tohle portýr %1$s zvládne levou zadní</string>
 </resources>
