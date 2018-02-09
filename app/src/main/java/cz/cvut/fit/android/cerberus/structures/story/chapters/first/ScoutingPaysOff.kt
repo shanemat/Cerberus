@@ -12,6 +12,6 @@ class ScoutingPaysOff(previousID: Long)
                 StoryResources(R.string.scouting_pays_off_text, PlayerRole.POACHER, awardedPoints = 1)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.poacher_call_out, PlayerRole.POACHER, 7))
+        addAnswer(StoryAnswer(R.string.poacher_call_out, PlayerRole.POACHER, 7, 8))
     }
 }

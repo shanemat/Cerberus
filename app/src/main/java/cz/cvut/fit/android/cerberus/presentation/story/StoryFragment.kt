@@ -13,8 +13,8 @@ import cz.cvut.fit.android.cerberus.presentation.minigames.GamesFactory
 import cz.cvut.fit.android.cerberus.presentation.story.answers.AnswerAdapter
 import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
 import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
-import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.chapters.first.Beginning
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import kotlinx.android.synthetic.main.f_main_story.*
 
 class StoryFragment internal constructor() : Fragment() {
@@ -92,13 +92,18 @@ class StoryFragment internal constructor() : Fragment() {
         if (shouldStartGame(role)) {
             startGame(role)
         } else {
-            changeStoryNode(chosenAnswer.targetID)
-            addPoints(currentStoryNode.awardedPoints)
+            continueInStory(chosenAnswer)
         }
     }
 
     private fun shouldStartGame(role: PlayerRole): Boolean {
         return currentStoryNode.leadsToGame && !ScoreManager.isGameScored(role)
+    }
+
+    private fun continueInStory(chosenAnswer: StoryAnswer) {
+        val nextNodeID = pickNextNodeID(chosenAnswer)
+        changeStoryNode(nextNodeID)
+        addPoints(currentStoryNode.awardedPoints)
     }
 
     private fun reportNoAnswerSelected(view: View) {
@@ -108,8 +113,20 @@ class StoryFragment internal constructor() : Fragment() {
     private fun changeStoryNode(nextNodeID: Long) {
         val currentNodeID = currentStoryNode.ID
         currentStoryNode = StoryFactory.getStoryNode(nextNodeID, currentNodeID)
-
         update()
+    }
+
+    private fun pickNextNodeID(chosenAnswer: StoryAnswer): Long {
+        return if (shouldTakeAlternativePath()) {
+            chosenAnswer.alternativeID
+        } else {
+            chosenAnswer.targetID
+        }
+    }
+
+    private fun shouldTakeAlternativePath(): Boolean {
+        // TODO add check for earned points
+        return currentStoryNode.leadsToGame && false
     }
 
     private fun addPoints(points: Int) {

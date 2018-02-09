@@ -12,6 +12,6 @@ class ActFirstThinkLater(previousID: Long)
                 StoryResources(R.string.act_first_think_later_text, PlayerRole.POACHER, awardedPoints = 1)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.poacher_call_out, role, 7))
+        addAnswer(StoryAnswer(R.string.poacher_call_out, role, 7, 8))
     }
 }

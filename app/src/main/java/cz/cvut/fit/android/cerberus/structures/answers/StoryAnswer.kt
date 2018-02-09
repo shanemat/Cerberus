@@ -5,7 +5,8 @@ import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 
 class StoryAnswer(private val textResourceID: Int,
                   private val currentRole: PlayerRole,
-                  val targetID: Long) {
+                  val targetID: Long,
+                  val alternativeID: Long = targetID) {
 
     var isSelected = false
 
