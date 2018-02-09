@@ -6,10 +6,12 @@ import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryLinks
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryRoles
 
 class PatrolAmbush(previousID: Long)
     : StoryNode(StoryLinks(6, previousID, 7, true),
-                StoryResources(R.string.patrol_ambush_text, PlayerRole.POACHER, awardedPoints = 0)) {
+                StoryRoles(PlayerRole.BOMB_EXPERT, PlayerRole.POACHER),
+                StoryResources(R.string.patrol_ambush_text, 0)) {
 
     init {
         addAnswer(StoryAnswer(R.string.poacher_call_out, PlayerRole.POACHER, 7, 8))

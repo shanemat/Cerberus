@@ -6,10 +6,12 @@ import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryLinks
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryRoles
 
 class SneakySneaky(previousID: Long)
     : StoryNode(StoryLinks(10, previousID, 13, false),
-                StoryResources(R.string.sneaky_sneaky_text, PlayerRole.PORTER, awardedPoints = 1)) {
+                StoryRoles(PlayerRole.POACHER, PlayerRole.PORTER),
+                StoryResources(R.string.sneaky_sneaky_text, 1)) {
 
     init {
         addAnswer(StoryAnswer(R.string.sneaky_sneaky_come_inside, PlayerRole.PORTER, 11))

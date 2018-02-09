@@ -6,13 +6,15 @@ import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryLinks
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryRoles
 
 class Parachutes(previousID: Long)
     : StoryNode(StoryLinks(2, previousID, 3, false),
-                StoryResources(R.string.parachutes_text, PlayerRole.POACHER, awardedPoints = 0)) {
+                StoryRoles(PlayerRole.BOMB_EXPERT),
+                StoryResources(R.string.parachutes_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.parachutes_go_straight, role, 5))
-        addAnswer(StoryAnswer(R.string.parachutes_create_strategy, role, 6))
+        addAnswer(StoryAnswer(R.string.parachutes_go_straight, answeringRole, 5))
+        addAnswer(StoryAnswer(R.string.parachutes_create_strategy, answeringRole, 6))
     }
 }

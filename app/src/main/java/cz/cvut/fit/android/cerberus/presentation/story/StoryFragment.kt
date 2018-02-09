@@ -88,7 +88,7 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     private fun moveForward(chosenAnswer: StoryAnswer) {
-        val role = currentStoryNode.role
+        val role = currentStoryNode.gameRole
         if (shouldStartGame(role)) {
             startGame(role)
         } else {
@@ -155,7 +155,7 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     private fun updateRoleText() {
-        val roleName = currentStoryNode.role.getName(this.activity!!)
+        val roleName = currentStoryNode.answeringRole.getName(this.activity!!)
         val baseName = getBaseName()
         storyRoleTextView.text = resources.getString(R.string.role_text, roleName, baseName)
     }

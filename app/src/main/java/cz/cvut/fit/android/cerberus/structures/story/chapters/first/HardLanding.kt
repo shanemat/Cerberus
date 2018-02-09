@@ -6,13 +6,15 @@ import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryLinks
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryRoles
 
 class HardLanding(previousID: Long)
     : StoryNode(StoryLinks(1, previousID, 3, false),
-                StoryResources(R.string.hard_landing_text, PlayerRole.POACHER, awardedPoints = 1)) {
+                StoryRoles(PlayerRole.BOMB_EXPERT),
+                StoryResources(R.string.hard_landing_text, 1)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.hard_landing_go_straight, role, 3))
-        addAnswer(StoryAnswer(R.string.hard_landing_create_strategy, role, 4))
+        addAnswer(StoryAnswer(R.string.hard_landing_go_straight, answeringRole, 3))
+        addAnswer(StoryAnswer(R.string.hard_landing_create_strategy, answeringRole, 4))
     }
 }

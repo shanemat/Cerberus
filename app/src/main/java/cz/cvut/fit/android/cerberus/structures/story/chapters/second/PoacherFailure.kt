@@ -6,10 +6,12 @@ import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryLinks
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryResources
+import cz.cvut.fit.android.cerberus.structures.story.node.StoryRoles
 
 class PoacherFailure(previousID: Long)
     : StoryNode(StoryLinks(8, previousID, 10, false),
-                StoryResources(R.string.poacher_game_failure_text, PlayerRole.PORTER, PlayerRole.POACHER, awardedPoints = 0)) {
+                StoryRoles(PlayerRole.POACHER),
+                StoryResources(R.string.poacher_game_failure_text, 0)) {
 
     init {
         addAnswer(StoryAnswer(R.string.poacher_game_guns_blazing, PlayerRole.PORTER, 9))
