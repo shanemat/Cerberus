@@ -17,4 +17,8 @@ object DAOFactory {
     fun getPlayerDAO(context: Context): IPlayerDAO {
         return PlayerDAO(context)
     }
+
+    fun getRecognitionDAO(context: Context): IRecognitionDAO {
+        return RecognitionDAO(context)
+    }
 }
