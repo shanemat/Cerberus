@@ -21,4 +21,8 @@ object DAOFactory {
     fun getRecognitionDAO(context: Context): IRecognitionDAO {
         return RecognitionDAO(context)
     }
+
+    fun getStoryNodeDAO(context: Context): IStoryNodeDAO {
+        return StoryNodeDAO(context)
+    }
 }
