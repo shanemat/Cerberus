@@ -9,4 +9,8 @@ object DAOFactory {
     fun getActualizationDAO(context: Context): IActualizationDAO {
         return ActualizationDAO(context)
     }
+
+    fun getGameDAO(context: Context): IGameDAO {
+        return GameDAO(context)
+    }
 }
