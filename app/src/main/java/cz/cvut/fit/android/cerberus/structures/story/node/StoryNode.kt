@@ -37,17 +37,16 @@ abstract class StoryNode(links: StoryLinks,
         // TODO add base name retrieval - based on TEXT ROLE!!!
         return "Unknown"
     }
+
+    data class StoryLinks(val ID: Long,
+                          val previousID: Long,
+                          val progress: Int,
+                          val leadsToGame: Boolean)
+
+    data class StoryRoles(val answeringRole: PlayerRole,
+                          val gameRole: PlayerRole = answeringRole,
+                          val textRole: PlayerRole = answeringRole)
+
+    data class StoryResources(val textResourceID: Int,
+                              val awardedPoints: Int)
 }
-
-data class StoryLinks(val ID: Long,
-                      val previousID: Long,
-                      val progress: Int,
-                      val leadsToGame: Boolean)
-
-data class StoryRoles(val answeringRole: PlayerRole,
-                      val gameRole: PlayerRole = answeringRole,
-                      val textRole: PlayerRole = answeringRole)
-
-data class StoryResources(val textResourceID: Int,
-                          val awardedPoints: Int)
-
