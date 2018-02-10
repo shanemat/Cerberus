@@ -1,0 +1,12 @@
+package cz.cvut.fit.android.cerberus.data.dao.interfaces
+
+import cz.cvut.fit.android.cerberus.structures.players.Player
+
+interface IPlayerDAO {
+
+    fun insertPlayers(players: ArrayList<Player>)
+
+    fun getTeamPlayers(teamID: Long): ArrayList<Player>
+
+    fun deleteAllPlayers()
+}

@@ -13,4 +13,8 @@ object DAOFactory {
     fun getGameDAO(context: Context): IGameDAO {
         return GameDAO(context)
     }
+
+    fun getPlayerDAO(context: Context): IPlayerDAO {
+        return PlayerDAO(context)
+    }
 }
