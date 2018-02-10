@@ -1,0 +1,12 @@
+package cz.cvut.fit.android.cerberus.data.dao
+
+import android.content.Context
+import cz.cvut.fit.android.cerberus.data.dao.implementation.*
+import cz.cvut.fit.android.cerberus.data.dao.interfaces.*
+
+object DAOFactory {
+
+    fun getActualizationDAO(context: Context): IActualizationDAO {
+        return ActualizationDAO(context)
+    }
+}
