@@ -3,7 +3,7 @@ package cz.cvut.fit.android.cerberus.structures.enums
 import android.content.Context
 import cz.cvut.fit.android.cerberus.R
 
-enum class PlayerRole(private val ID: Long, private val textResourceID: Int) {
+enum class PlayerRole(val ID: Long, private val textResourceID: Int) {
 
     POACHER(0, R.string.role_poacher),
     PORTER(1, R.string.role_porter),
@@ -15,6 +15,12 @@ enum class PlayerRole(private val ID: Long, private val textResourceID: Int) {
     CHIEF(7, R.string.role_chief),
     QUARTERMASTER(8, R.string.role_quartermaster),
     BOMB_EXPERT(9, R.string.role_bomb_expert);
+
+    companion object {
+        fun getRole(roleID: Long): PlayerRole? {
+            return PlayerRole.values().firstOrNull { it.ID == roleID }
+        }
+    }
 
     fun getName(context: Context): String {
         return context.resources.getString(textResourceID)
