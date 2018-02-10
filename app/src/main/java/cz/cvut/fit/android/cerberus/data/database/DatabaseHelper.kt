@@ -4,6 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import cz.cvut.fit.android.cerberus.data.database.prototype.Table
+import cz.cvut.fit.android.cerberus.data.database.tables.GameTable
 import cz.cvut.fit.android.cerberus.structures.prototype.SingletonHolder
 
 class DatabaseHelper private constructor (context: Context)
@@ -28,7 +29,7 @@ class DatabaseHelper private constructor (context: Context)
     private fun getTables(): ArrayList<Table> {
         val tables = ArrayList<Table>()
 
-        // add all database tables
+        tables.add(GameTable())
 
         return tables
     }
