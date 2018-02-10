@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import cz.cvut.fit.android.cerberus.data.database.prototype.Table
 import cz.cvut.fit.android.cerberus.data.database.tables.GameTable
 import cz.cvut.fit.android.cerberus.data.database.tables.PlayerTable
+import cz.cvut.fit.android.cerberus.data.database.tables.StoryNodeTable
 import cz.cvut.fit.android.cerberus.structures.prototype.SingletonHolder
 
 class DatabaseHelper private constructor (context: Context)
@@ -32,6 +33,7 @@ class DatabaseHelper private constructor (context: Context)
 
         tables.add(GameTable())
         tables.add(PlayerTable())
+        tables.add(StoryNodeTable())
 
         return tables
     }
