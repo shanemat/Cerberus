@@ -8,4 +8,8 @@ object ManagerFactory {
     fun getActualizationManager(): IActualizationManager {
         return ActualizationManager
     }
+
+    fun getGameManager(): IGameManager {
+        return GameManager
+    }
 }
