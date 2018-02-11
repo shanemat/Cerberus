@@ -7,13 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
-import cz.cvut.fit.android.cerberus.business.ScoreManager
-import cz.cvut.fit.android.cerberus.business.StoryFactory
+import cz.cvut.fit.android.cerberus.business.ManagerFactory
 import cz.cvut.fit.android.cerberus.presentation.minigames.GamesFactory
 import cz.cvut.fit.android.cerberus.presentation.story.answers.AnswerAdapter
 import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
 import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
-import cz.cvut.fit.android.cerberus.structures.story.chapters.first.Beginning
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import kotlinx.android.synthetic.main.f_main_story.*
 
@@ -27,6 +25,8 @@ class StoryFragment internal constructor() : Fragment() {
         const val MINIMUM_PROGRESS = 0
         const val MAXIMUM_PROGRESS = 100
 
+        const val ALTERNATIVE_PATH_THRESHOLD = 1
+
         fun newInstance(): StoryFragment {
             return StoryFragment()
         }
@@ -35,7 +35,7 @@ class StoryFragment internal constructor() : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        currentStoryNode = getCurrentStoryNode()
+        updateStoryNode()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -49,9 +49,9 @@ class StoryFragment internal constructor() : Fragment() {
         update()
     }
 
-    private fun getCurrentStoryNode(): StoryNode {
-        // TODO add extraction of node based on stored ID
-        return Beginning()
+    private fun updateStoryNode() {
+        val manager = ManagerFactory.getStoryNodeManager()
+        currentStoryNode = manager.getCurrent(this.activity!!)
     }
 
     private fun setUp() {
@@ -71,8 +71,13 @@ class StoryFragment internal constructor() : Fragment() {
 
     private fun setUpBackButton() {
         storyBackButton.setOnClickListener {
-            changeStoryNode(currentStoryNode.previousID)
+            val manager = ManagerFactory.getStoryNodeManager()
+
+            manager.moveBackward(this.activity!!)
             subtractPoints(currentStoryNode.awardedPoints)
+
+            updateStoryNode()
+            update()
         }
     }
 
@@ -97,23 +102,23 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     private fun shouldStartGame(role: PlayerRole): Boolean {
-        return currentStoryNode.leadsToGame && !ScoreManager.isGameScored(role)
+        val manager = ManagerFactory.getGameManager()
+        return currentStoryNode.leadsToGame && !manager.isScored(this.activity!!, role)
     }
 
     private fun continueInStory(chosenAnswer: StoryAnswer) {
         val nextNodeID = pickNextNodeID(chosenAnswer)
-        changeStoryNode(nextNodeID)
+        val manager = ManagerFactory.getStoryNodeManager()
+
+        manager.moveForward(this.activity!!, nextNodeID)
         addPoints(currentStoryNode.awardedPoints)
+
+        updateStoryNode()
+        update()
     }
 
     private fun reportNoAnswerSelected(view: View) {
         Snackbar.make(view, R.string.error_no_answer, Snackbar.LENGTH_SHORT).show()
-    }
-
-    private fun changeStoryNode(nextNodeID: Long) {
-        val currentNodeID = currentStoryNode.ID
-        currentStoryNode = StoryFactory.getStoryNode(nextNodeID, currentNodeID)
-        update()
     }
 
     private fun pickNextNodeID(chosenAnswer: StoryAnswer): Long {
@@ -125,16 +130,24 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     private fun shouldTakeAlternativePath(): Boolean {
-        // TODO add check for earned points
-        return currentStoryNode.leadsToGame && false
+        val manager = ManagerFactory.getGameManager()
+        val score = manager.getScore(this.activity!!, currentStoryNode.gameRole)
+
+        return if (score != null) {
+            currentStoryNode.leadsToGame && (score >= ALTERNATIVE_PATH_THRESHOLD)
+        } else {
+            false
+        }
     }
 
     private fun addPoints(points: Int) {
-        ScoreManager.addStoryPoints(points)
+        val manager = ManagerFactory.getStoryPointsManager()
+        manager.add(this.activity!!, points)
     }
 
     private fun subtractPoints(points: Int) {
-        ScoreManager.subtractStoryPoints(points)
+        val manager = ManagerFactory.getStoryPointsManager()
+        manager.subtract(this.activity!!, points)
     }
 
     private fun startGame(role: PlayerRole) {
@@ -191,7 +204,9 @@ class StoryFragment internal constructor() : Fragment() {
     }
 
     private fun getBaseName(): String {
-        // TODO add base name retrieval
-        return "Unknown"
+        val manager = ManagerFactory.getPlayerManager()
+        val player = manager.getPlayer(this.activity!!, currentStoryNode.answeringRole)
+
+        return player?.name ?: "---"
     }
 }
