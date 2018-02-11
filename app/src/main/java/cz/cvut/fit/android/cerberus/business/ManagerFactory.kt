@@ -16,4 +16,8 @@ object ManagerFactory {
     fun getPlayerManager(): IPlayerManager {
         return PlayerManager
     }
+
+    fun getRecognitionManager(): IRecognitionManager {
+        return RecognitionManager
+    }
 }
