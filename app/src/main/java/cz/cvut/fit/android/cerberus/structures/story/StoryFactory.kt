@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.business
+package cz.cvut.fit.android.cerberus.structures.story
 
 import cz.cvut.fit.android.cerberus.structures.story.node.StoryNode
 import cz.cvut.fit.android.cerberus.structures.story.node.UnknownNode
