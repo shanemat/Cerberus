@@ -13,6 +13,7 @@ abstract class DAO (private val context: Context) {
 
         const val PREFERENCES_STORY_POINTS = "Story points"
         const val PREFERENCES_STORY_NODE_ID = "Story node ID"
+        const val PREFERENCES_TEAM_ID = "Team ID"
         const val PREFERENCES_ACTUALIZATION = "Actualization"
     }
 

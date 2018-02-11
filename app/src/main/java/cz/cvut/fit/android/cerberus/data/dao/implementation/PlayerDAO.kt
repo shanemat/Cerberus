@@ -18,6 +18,11 @@ class PlayerDAO(context: Context) : DAO(context), IPlayerDAO {
                 .forEach { database.insert(PlayerTable.TABLE_NAME, null, it) }
     }
 
+    override fun getCurrentTeam(): Long {
+        val preferences = getPreferences()
+        return preferences.getLong(PREFERENCES_TEAM_ID, 1L)
+    }
+
     override fun getTeamPlayers(teamID: Long): ArrayList<Player> {
         val database = getDatabase()
         val players = ArrayList<Player>()
@@ -35,6 +40,13 @@ class PlayerDAO(context: Context) : DAO(context), IPlayerDAO {
         }
 
         return players
+    }
+
+    override fun updateCurrentTeam(teamID: Long) {
+        val preferences = getPreferences()
+        preferences.edit()
+                .putLong(PREFERENCES_TEAM_ID, teamID)
+                .apply()
     }
 
     override fun deleteAllPlayers() {

@@ -6,7 +6,11 @@ interface IPlayerDAO {
 
     fun insertPlayers(players: ArrayList<Player>)
 
+    fun getCurrentTeam(): Long?
+
     fun getTeamPlayers(teamID: Long): ArrayList<Player>
+
+    fun updateCurrentTeam(teamID: Long)
 
     fun deleteAllPlayers()
 }
