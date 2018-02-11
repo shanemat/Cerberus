@@ -24,4 +24,8 @@ object ManagerFactory {
     fun getStoryNodeManager(): IStoryNodeManager {
         return StoryNodeManager
     }
+
+    fun getStoryPointsManager(): IStoryPointsManager {
+        return StoryPointsManager
+    }
 }
