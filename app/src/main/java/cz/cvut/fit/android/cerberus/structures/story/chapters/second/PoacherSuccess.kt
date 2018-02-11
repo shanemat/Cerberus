@@ -11,7 +11,7 @@ class PoacherSuccess(previousID: Long)
                 StoryResources(R.string.poacher_game_success_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.poacher_game_guns_blazing, PlayerRole.PORTER, 9))
-        addAnswer(StoryAnswer(R.string.poacher_game_sneaky_sneaky, PlayerRole.PORTER, 10))
+        addAnswer(StoryAnswer(70, R.string.poacher_game_guns_blazing, PlayerRole.PORTER, 9))
+        addAnswer(StoryAnswer(71, R.string.poacher_game_sneaky_sneaky, PlayerRole.PORTER, 10))
     }
 }

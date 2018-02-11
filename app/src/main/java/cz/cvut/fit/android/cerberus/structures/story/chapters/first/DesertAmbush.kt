@@ -11,6 +11,6 @@ class DesertAmbush(previousID: Long)
                 StoryResources(R.string.desert_ambush_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.poacher_call_out, PlayerRole.POACHER, 7, 8))
+        addAnswer(StoryAnswer(30, R.string.poacher_call_out, PlayerRole.POACHER, 7, 8))
     }
 }

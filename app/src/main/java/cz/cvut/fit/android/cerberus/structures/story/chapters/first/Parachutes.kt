@@ -11,7 +11,7 @@ class Parachutes(previousID: Long)
                 StoryResources(R.string.parachutes_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.parachutes_go_straight, answeringRole, 5))
-        addAnswer(StoryAnswer(R.string.parachutes_create_strategy, answeringRole, 6))
+        addAnswer(StoryAnswer(20, R.string.parachutes_go_straight, answeringRole, 5))
+        addAnswer(StoryAnswer(21, R.string.parachutes_create_strategy, answeringRole, 6))
     }
 }

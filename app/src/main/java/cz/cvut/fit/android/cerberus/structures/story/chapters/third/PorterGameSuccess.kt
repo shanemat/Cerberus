@@ -11,8 +11,8 @@ class PorterGameSuccess(previousID: Long)
                 StoryResources(R.string.porter_game_success_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.porter_game_pedal_to_the_metal, answeringRole, 15))
-        addAnswer(StoryAnswer(R.string.porter_game_board_inside, answeringRole, 16))
-        addAnswer(StoryAnswer(R.string.porter_game_board_outside, answeringRole, 17))
+        addAnswer(StoryAnswer(130, R.string.porter_game_pedal_to_the_metal, answeringRole, 15))
+        addAnswer(StoryAnswer(131, R.string.porter_game_board_inside, answeringRole, 16))
+        addAnswer(StoryAnswer(132, R.string.porter_game_board_outside, answeringRole, 17))
     }
 }

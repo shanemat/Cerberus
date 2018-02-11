@@ -11,6 +11,6 @@ class ComeInside(previousID: Long)
                 StoryResources(R.string.come_inside_text, 1)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.porter_call_out, PlayerRole.PORTER, 13, 14))
+        addAnswer(StoryAnswer(110, R.string.porter_call_out, PlayerRole.PORTER, 13, 14))
     }
 }

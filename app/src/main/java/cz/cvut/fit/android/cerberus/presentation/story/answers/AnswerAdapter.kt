@@ -6,10 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import cz.cvut.fit.android.cerberus.R
+import cz.cvut.fit.android.cerberus.business.ManagerFactory
 import cz.cvut.fit.android.cerberus.structures.answers.StoryAnswer
 
 class AnswerAdapter(context: Context, private var answers: ArrayList<StoryAnswer>)
     : ArrayAdapter<StoryAnswer>(context, 0) {
+
+    init {
+        obtainSelectedAnswer()
+        answers.shuffle()
+    }
 
     override fun getCount(): Int {
         return answers.size
@@ -38,10 +44,23 @@ class AnswerAdapter(context: Context, private var answers: ArrayList<StoryAnswer
 
     fun setAnswers(answers: ArrayList<StoryAnswer>) {
         this.answers = answers
+        obtainSelectedAnswer()
+        answers.shuffle()
     }
 
     fun getChosenAnswer(): StoryAnswer? {
         return answers.firstOrNull { it.isSelected }
+    }
+
+    private fun obtainSelectedAnswer() {
+        val manager = ManagerFactory.getStoryNodeManager()
+        val chosenAnswerID = manager.getAnswerID(context)
+
+        if (chosenAnswerID != null) {
+            answers
+                    .filter { it.ID == chosenAnswerID }
+                    .forEach { it.isSelected = true }
+        }
     }
 
     private fun populateHolder(context: Context, holder: AnswerItemHolder, answer: StoryAnswer) {
@@ -67,6 +86,9 @@ class AnswerAdapter(context: Context, private var answers: ArrayList<StoryAnswer
     }
 
     private fun selectAnswer(answer: StoryAnswer) {
+        val manager = ManagerFactory.getStoryNodeManager()
+        manager.setAnswerID(context, answer.ID)
+
         answer.isSelected = true
     }
 

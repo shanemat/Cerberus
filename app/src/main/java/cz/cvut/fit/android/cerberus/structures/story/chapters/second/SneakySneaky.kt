@@ -11,7 +11,7 @@ class SneakySneaky(previousID: Long)
                 StoryResources(R.string.sneaky_sneaky_text, 1)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.sneaky_sneaky_come_inside, PlayerRole.PORTER, 11))
-        addAnswer(StoryAnswer(R.string.sneaky_sneaky_shoot_asap, PlayerRole.PORTER, 12))
+        addAnswer(StoryAnswer(100, R.string.sneaky_sneaky_come_inside, PlayerRole.PORTER, 11))
+        addAnswer(StoryAnswer(101, R.string.sneaky_sneaky_shoot_asap, PlayerRole.PORTER, 12))
     }
 }

@@ -11,7 +11,7 @@ class Beginning()
                 StoryResources(R.string.beginning_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.beginning_answer_wait_little_longer, answeringRole, 1))
-        addAnswer(StoryAnswer(R.string.beginning_answer_open_parachutes, answeringRole, 2))
+        addAnswer(StoryAnswer(0, R.string.beginning_answer_wait_little_longer, answeringRole, 1))
+        addAnswer(StoryAnswer(1, R.string.beginning_answer_open_parachutes, answeringRole, 2))
     }
 }

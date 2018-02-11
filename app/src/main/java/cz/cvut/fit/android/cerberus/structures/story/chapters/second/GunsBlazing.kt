@@ -11,6 +11,6 @@ class GunsBlazing(previousID: Long)
                 StoryResources(R.string.guns_blazing_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.porter_call_out, PlayerRole.PORTER, 13, 14))
+        addAnswer(StoryAnswer(90, R.string.porter_call_out, PlayerRole.PORTER, 13, 14))
     }
 }

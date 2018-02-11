@@ -10,6 +10,6 @@ class UnknownNode(previousID: Long)
                 StoryResources(R.string.unknown_node_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.unknown_node_answer, PlayerRole.POACHER, 0))
+        addAnswer(StoryAnswer(-10, R.string.unknown_node_answer, PlayerRole.POACHER, 0))
     }
 }

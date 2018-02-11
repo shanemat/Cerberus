@@ -11,6 +11,6 @@ class PatrolAmbush(previousID: Long)
                 StoryResources(R.string.patrol_ambush_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.poacher_call_out, PlayerRole.POACHER, 7, 8))
+        addAnswer(StoryAnswer(60, R.string.poacher_call_out, PlayerRole.POACHER, 7, 8))
     }
 }

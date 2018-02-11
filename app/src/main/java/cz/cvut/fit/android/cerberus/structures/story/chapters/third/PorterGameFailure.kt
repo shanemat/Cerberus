@@ -11,8 +11,8 @@ class PorterGameFailure(previousID: Long)
                 StoryResources(R.string.porter_game_failure_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.porter_game_pedal_to_the_metal, answeringRole, 15))
-        addAnswer(StoryAnswer(R.string.porter_game_board_inside, answeringRole, 16))
-        addAnswer(StoryAnswer(R.string.porter_game_board_outside, answeringRole, 17))
+        addAnswer(StoryAnswer(140, R.string.porter_game_pedal_to_the_metal, answeringRole, 15))
+        addAnswer(StoryAnswer(141, R.string.porter_game_board_inside, answeringRole, 16))
+        addAnswer(StoryAnswer(142, R.string.porter_game_board_outside, answeringRole, 17))
     }
 }

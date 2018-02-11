@@ -11,6 +11,6 @@ class ShootASAP(previousID: Long)
                 StoryResources(R.string.shoot_asap_text, 0)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.porter_call_out, PlayerRole.PORTER, 13, 14))
+        addAnswer(StoryAnswer(120, R.string.porter_call_out, PlayerRole.PORTER, 13, 14))
     }
 }

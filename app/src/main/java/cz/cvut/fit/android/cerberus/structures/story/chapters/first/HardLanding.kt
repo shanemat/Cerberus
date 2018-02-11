@@ -11,7 +11,7 @@ class HardLanding(previousID: Long)
                 StoryResources(R.string.hard_landing_text, 1)) {
 
     init {
-        addAnswer(StoryAnswer(R.string.hard_landing_go_straight, answeringRole, 3))
-        addAnswer(StoryAnswer(R.string.hard_landing_create_strategy, answeringRole, 4))
+        addAnswer(StoryAnswer(10, R.string.hard_landing_go_straight, answeringRole, 3))
+        addAnswer(StoryAnswer(11, R.string.hard_landing_create_strategy, answeringRole, 4))
     }
 }
