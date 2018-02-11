@@ -12,4 +12,8 @@ object ManagerFactory {
     fun getGameManager(): IGameManager {
         return GameManager
     }
+
+    fun getPlayerManager(): IPlayerManager {
+        return PlayerManager
+    }
 }
