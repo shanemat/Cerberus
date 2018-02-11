@@ -20,4 +20,8 @@ object ManagerFactory {
     fun getRecognitionManager(): IRecognitionManager {
         return RecognitionManager
     }
+
+    fun getStoryNodeManager(): IStoryNodeManager {
+        return StoryNodeManager
+    }
 }
