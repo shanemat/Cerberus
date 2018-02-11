@@ -8,12 +8,24 @@ import cz.cvut.fit.android.cerberus.data.database.tables.StoryNodeTable
 
 class StoryNodeDAO(context: Context) : DAO(context), IStoryNodeDAO {
 
+    override fun getCurrentNodeID(): Long? {
+        val preferences = getPreferences()
+        return preferences.getLong(PREFERENCES_STORY_NODE_ID, 0)
+    }
+
     override fun getPreviousNodeID(currentNodeID: Long): Long? {
         return getLong(currentNodeID, StoryNodeTable.PREVIOUS_ID)
     }
 
     override fun getChosenAnswerID(currentNodeID: Long): Long? {
         return getLong(currentNodeID, StoryNodeTable.ANSWER_ID)
+    }
+
+    override fun updateCurrentNodeID(currentNodeID: Long) {
+        val preferences = getPreferences()
+        preferences.edit()
+                .putLong(PREFERENCES_STORY_NODE_ID, currentNodeID)
+                .apply()
     }
 
     override fun updatePreviousNodeID(currentNodeID: Long, previousNodeID: Long) {
