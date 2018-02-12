@@ -73,8 +73,8 @@ class StoryFragment internal constructor() : Fragment() {
         storyBackButton.setOnClickListener {
             val manager = ManagerFactory.getStoryNodeManager()
 
-            manager.moveBackward(this.activity!!)
             subtractPoints(currentStoryNode.awardedPoints)
+            manager.moveBackward(this.activity!!)
 
             updateStoryNode()
             update()
@@ -111,9 +111,9 @@ class StoryFragment internal constructor() : Fragment() {
         val manager = ManagerFactory.getStoryNodeManager()
 
         manager.moveForward(this.activity!!, nextNodeID)
-        addPoints(currentStoryNode.awardedPoints)
-
         updateStoryNode()
+
+        addPoints(currentStoryNode.awardedPoints)
         update()
     }
 
