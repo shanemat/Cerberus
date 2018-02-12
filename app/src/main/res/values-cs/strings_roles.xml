@@ -10,4 +10,15 @@
     <string name="role_chief">náčelník</string>
     <string name="role_quartermaster">proviantní důstojník</string>
     <string name="role_bomb_expert">pyrotechnik</string>
+
+    <string name="role_poacher_upper">Pytlák</string>
+    <string name="role_porter_upper">Portýr</string>
+    <string name="role_driver_upper">Řidič</string>
+    <string name="role_armed_escort_upper">Ozbrojený doprovod</string>
+    <string name="role_translator_upper">Překladatel</string>
+    <string name="role_paramedic_upper">Zdravotník</string>
+    <string name="role_archaeologist_upper">Archeolog</string>
+    <string name="role_chief_upper">Náčelník</string>
+    <string name="role_quartermaster_upper">Proviantní důstojník</string>
+    <string name="role_bomb_expert_upper">Pyrotechnik</string>
 </resources>

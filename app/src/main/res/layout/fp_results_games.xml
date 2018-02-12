@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/standard_padding_medium"
+
+        android:gravity="center"
+        android:background="@color/colorAccent"
+
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/color_white"
+        android:textStyle="bold|italic"
+        android:text="@string/results_game_points_header"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:padding="@dimen/standard_padding_medium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_poacher_upper"/>
+
+            <TextView
+                android:id="@+id/resultsPoacherPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_porter_upper"/>
+
+            <TextView
+                android:id="@+id/resultsPorterPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_driver_upper"/>
+
+            <TextView
+                android:id="@+id/resultsDriverPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="0"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_armed_escort_upper"/>
+
+            <TextView
+                android:id="@+id/resultsArmedEscortPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_translator_upper"/>
+
+            <TextView
+                android:id="@+id/resultsTranslatorPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_paramedic_upper"/>
+
+            <TextView
+                android:id="@+id/resultsParamedicPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_archaeologist_upper"/>
+
+            <TextView
+                android:id="@+id/resultsArchaeologistPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_chief_upper"/>
+
+            <TextView
+                android:id="@+id/resultsChiefPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_quartermaster_upper"/>
+
+            <TextView
+                android:id="@+id/resultsQuarterMasterPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+
+                android:gravity="center"
+                android:text="@string/role_bomb_expert_upper"/>
+
+            <TextView
+                android:id="@+id/resultsBombExpertPoints"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.3"
+
+                android:gravity="center"
+
+                android:textStyle="bold|italic"
+                tools:text="-"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

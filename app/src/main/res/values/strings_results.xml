@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="results_game_points_header">Games</string>
+    <string name="results_story_points_header">Story decisions</string>
+    <string name="results_sum_points_header">Total points</string>
+</resources>

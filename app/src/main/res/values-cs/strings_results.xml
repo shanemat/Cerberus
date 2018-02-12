@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="results_game_points_header">Úkoly</string>
+    <string name="results_story_points_header">Rozhodnutí v příběhu</string>
+    <string name="results_sum_points_header">Celkově bodů</string>
+</resources>

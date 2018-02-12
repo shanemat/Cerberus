@@ -10,4 +10,15 @@
     <string name="role_chief">chief</string>
     <string name="role_quartermaster">quartermaster</string>
     <string name="role_bomb_expert">bomb expert</string>
+
+    <string name="role_poacher_upper">Poacher</string>
+    <string name="role_porter_upper">Porter</string>
+    <string name="role_driver_upper">Driver</string>
+    <string name="role_armed_escort_upper">Armed escort</string>
+    <string name="role_translator_upper">Translator</string>
+    <string name="role_paramedic_upper">Paramedic</string>
+    <string name="role_archaeologist_upper">Archaeologist</string>
+    <string name="role_chief_upper">Chief</string>
+    <string name="role_quartermaster_upper">Quartermaster</string>
+    <string name="role_bomb_expert_upper">Bomb expert</string>
 </resources>
