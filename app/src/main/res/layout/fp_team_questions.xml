@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/standard_padding_medium"
+
+        android:gravity="center"
+        android:background="@color/colorAccent"
+
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/color_white"
+        android:textStyle="bold|italic"
+        tools:text="Question 4 / 22"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/teamBackButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:paddingStart="@dimen/standard_padding_big"
+            android:paddingEnd="@dimen/standard_padding_big"
+            android:gravity="start|center_vertical"
+
+            android:drawableStart="@drawable/ic_back_arrow"
+            android:text="@string/back"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <CheckBox
+            android:id="@+id/teamAnsweredCheckBox"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/teamQuestionTextView"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+
+            android:gravity="center"
+
+            android:textSize="@dimen/text_size_big"
+            tools:text="What is the name of this person? - 7"/>
+
+        <Button
+            android:id="@+id/teamForwardButton"
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:paddingStart="@dimen/standard_padding_big"
+            android:paddingEnd="@dimen/standard_padding_big"
+            android:gravity="end|center_vertical"
+
+            android:drawableEnd="@drawable/ic_forward_arrow"
+            android:text="@string/forward"
+            android:background="?android:attr/selectableItemBackground"/>
+    </LinearLayout>
+</LinearLayout>

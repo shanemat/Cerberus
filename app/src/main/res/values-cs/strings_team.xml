@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="team_photo_description">Fotografie týmu</string>
+    <string name="team_photo_button_description">Pořídit fotografii</string>
+</resources>

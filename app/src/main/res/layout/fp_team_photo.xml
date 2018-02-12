@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:gravity="center"
+
+    android:padding="@dimen/standard_padding_medium">
+
+    <ImageView
+        android:id="@+id/teamPhotoImageView"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:contentDescription="@string/team_photo_description"
+        android:src="@drawable/ic_family"/>
+
+    <ImageButton
+        android:id="@+id/teamTakePhotoButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="@dimen/standard_padding_short"
+
+        android:src="@drawable/ic_photo"
+        android:contentDescription="@string/team_photo_button_description"
+        android:background="?android:attr/selectableItemBackground"/>
+
+</LinearLayout>
