@@ -5,6 +5,7 @@
     <string name="team_question_progress">Otázka %1$d / %2$d</string>
 
     <string name="team_question_not_answered">Otázka není zodpovězená</string>
+    <string name="team_photo_cannot_be_taken">Není možné pořídit fotografii</string>
 
     <string name="team_question_show_member">Který ze členů týmu na fotce se jmenuje … ?  -  %1$d</string>
     <string name="team_question_name_member">Jak se jmenuje člen týmu na fotce?  -  %1$d</string>

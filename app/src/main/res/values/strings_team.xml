@@ -5,6 +5,7 @@
     <string name="team_question_progress">Question %1$d / %2$d</string>
 
     <string name="team_question_not_answered">Question is not answered</string>
+    <string name="team_photo_cannot_be_taken">Photo cannot be taken</string>
 
     <string name="team_question_show_member">Which member has name … ?  -  %1$d</string>
     <string name="team_question_name_member">What is the name of this member?  -  %1$d</string>

@@ -1,5 +1,6 @@
 package cz.cvut.fit.android.cerberus.presentation.team
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.app.Fragment
@@ -24,6 +25,9 @@ class TeamFragment internal constructor() : Fragment() {
     private lateinit var memberAdapter: TeamMemberAdapter
 
     companion object Creator {
+
+        const val REQUEST_PHOTO = 0
+
         fun newInstance(): TeamFragment {
             return TeamFragment()
         }
@@ -83,8 +87,23 @@ class TeamFragment internal constructor() : Fragment() {
 
     private fun setUpPhotoButton() {
         teamTakePhotoButton.setOnClickListener {
-            // TODO add request to take a photo
+            val manager = ManagerFactory.getPhotoManager()
+            val photoIntent = manager.prepareCameraIntent(activity!!)
+
+            if (photoIntent != null) {
+                startPhotoActivity(photoIntent)
+            } else {
+                reportCameraUnavailable(it)
+            }
         }
+    }
+
+    private fun startPhotoActivity(intent: Intent) {
+        startActivityForResult(intent, REQUEST_PHOTO)
+    }
+
+    private fun reportCameraUnavailable(view: View) {
+        Snackbar.make(view, R.string.team_photo_cannot_be_taken, Snackbar.LENGTH_SHORT).show()
     }
 
     private fun setUpBackButton() {
@@ -123,9 +142,19 @@ class TeamFragment internal constructor() : Fragment() {
     }
 
     private fun update() {
+        updateTeamPhoto()
         updateTeamMembers()
         updateQuestion()
         updateButtons()
+    }
+
+    private fun updateTeamPhoto() {
+        val manager = ManagerFactory.getPhotoManager()
+        val photo = manager.getTeamPhoto(activity!!)
+
+        if (photo != null) {
+            teamPhotoImageView.setImageBitmap(photo)
+        }
     }
 
     private fun updateTeamMembers() {
