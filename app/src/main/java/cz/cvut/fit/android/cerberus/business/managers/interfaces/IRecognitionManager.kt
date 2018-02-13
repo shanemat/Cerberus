@@ -4,7 +4,15 @@ import android.content.Context
 
 interface IRecognitionManager {
 
-    fun isAnswered(context: Context, questionID: Long): Boolean
+    fun getCurrent(context: Context): Int
 
-    fun setAnswered(context: Context, questionID: Long, answered: Boolean)
+    fun isAnswered(context: Context): Boolean
+
+    fun moveBack(context: Context)
+
+    fun moveForward(context: Context)
+
+    fun setAnswered(context: Context, answered: Boolean)
+
+    fun resetAll(context: Context)
 }

@@ -2,7 +2,13 @@ package cz.cvut.fit.android.cerberus.data.dao.interfaces
 
 interface IRecognitionDAO {
 
-    fun isAnswered(questionID: Long): Boolean
+    fun getCurrent(): Int?
 
-    fun setAnswered(questionID: Long, answered: Boolean)
+    fun isAnswered(questionID: Int): Boolean
+
+    fun setCurrent(questionID: Int)
+
+    fun setAnswered(questionID: Int, answered: Boolean)
+
+    fun resetAll()
 }

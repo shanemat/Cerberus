@@ -9,7 +9,12 @@ import cz.cvut.fit.android.cerberus.data.database.tables.RecognitionTable
 
 class RecognitionDAO(context: Context) : DAO(context), IRecognitionDAO {
 
-    override fun isAnswered(questionID: Long): Boolean {
+    override fun getCurrent(): Int? {
+        val preferences = getPreferences()
+        return preferences.getInt(PREFERENCES_QUESTION_ID, 1)
+    }
+
+    override fun isAnswered(questionID: Int): Boolean {
         val database = getDatabase()
 
         val whereClause = prepareWhereClause(RecognitionTable.ID)
@@ -27,7 +32,14 @@ class RecognitionDAO(context: Context) : DAO(context), IRecognitionDAO {
         return false
     }
 
-    override fun setAnswered(questionID: Long, answered: Boolean) {
+    override fun setCurrent(questionID: Int) {
+        val preferences = getPreferences()
+        preferences.edit()
+                .putInt(PREFERENCES_QUESTION_ID, questionID)
+                .apply()
+    }
+
+    override fun setAnswered(questionID: Int, answered: Boolean) {
         val database = getDatabase()
 
         val whereClause = prepareWhereClause(RecognitionTable.ID)
@@ -36,6 +48,13 @@ class RecognitionDAO(context: Context) : DAO(context), IRecognitionDAO {
         val values = getValuesFrom(answered)
 
         database.update(RecognitionTable.TABLE_NAME, values, whereClause, whereArgs)
+    }
+
+    override fun resetAll() {
+        val database = getDatabase()
+        val values = getValuesFrom(false)
+
+        database.update(RecognitionTable.TABLE_NAME, values, null, null)
     }
 
     private fun getValuesFrom(answered: Boolean): ContentValues {
