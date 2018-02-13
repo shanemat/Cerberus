@@ -2,4 +2,11 @@
 <resources>
     <string name="team_photo_description">Team photo</string>
     <string name="team_photo_button_description">Take photo</string>
+    <string name="team_question_progress">Question %1$d / %2$d</string>
+
+    <string name="team_question_not_answered">Question is not answered</string>
+
+    <string name="team_question_show_member">Which member has name … ?  -  %1$d</string>
+    <string name="team_question_name_member">What is the name of this member?  -  %1$d</string>
+    <string name="team_question_name_special_part">What is the name of your special part?  -  %1$d</string>
 </resources>
