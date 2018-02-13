@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".presentation.MainActivity"
+            android:name=".presentation.screens.MainActivity"
             android:screenOrientation="landscape">
 
             <intent-filter>
@@ -24,43 +24,43 @@
         </activity>
 
         <activity
-            android:name=".presentation.minigames.poacher.PoacherGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.poacher.PoacherGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.porter.PorterGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.porter.PorterGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.driver.DriverGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.driver.DriverGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.armedescort.ArmedEscortGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.armedescort.ArmedEscortGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.translator.TranslatorGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.translator.TranslatorGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.paramedic.ParamedicGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.paramedic.ParamedicGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.archaeologist.ArchaeologistGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.archaeologist.ArchaeologistGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.chief.ChiefGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.chief.ChiefGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.quartermaster.QuartermasterGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.quartermaster.QuartermasterGameActivity"
             android:screenOrientation="landscape"/>
 
         <activity
-            android:name=".presentation.minigames.bombexpert.BombExpertGameActivity"
+            android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.bombexpert.BombExpertGameActivity"
             android:screenOrientation="landscape"/>
     </application>
 
