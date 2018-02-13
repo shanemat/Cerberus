@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.presentation.team.members
+package cz.cvut.fit.android.cerberus.presentation.screens.team.members
 
 import android.content.Context
 import android.view.LayoutInflater
