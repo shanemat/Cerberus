@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.presentation.team
+package cz.cvut.fit.android.cerberus.presentation.screens.team
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.business.ManagerFactory
-import cz.cvut.fit.android.cerberus.presentation.team.members.TeamMemberAdapter
+import cz.cvut.fit.android.cerberus.presentation.screens.team.members.TeamMemberAdapter
+import cz.cvut.fit.android.cerberus.presentation.screens.team.photo.TeamPhotoActivity
 import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.players.Player
 import cz.cvut.fit.android.cerberus.structures.questions.QuestionFactory
@@ -75,7 +76,8 @@ class TeamFragment internal constructor() : Fragment() {
 
     private fun setUpPhoto() {
         teamPhotoImageView.setOnClickListener {
-            // TODO start activity with full view of the photo
+            val photoIntent = TeamPhotoActivity.newIntent(activity!!)
+            startActivity(photoIntent)
         }
     }
 
