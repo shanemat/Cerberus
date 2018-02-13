@@ -62,6 +62,9 @@
         <activity
             android:name="cz.cvut.fit.android.cerberus.presentation.screens.minigames.bombexpert.BombExpertGameActivity"
             android:screenOrientation="landscape"/>
+
+        <activity android:name=".presentation.screens.team.photo.TeamPhotoActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
