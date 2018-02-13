@@ -44,8 +44,11 @@ class AnswerAdapter(context: Context, private var answers: ArrayList<StoryAnswer
 
     fun setAnswers(answers: ArrayList<StoryAnswer>) {
         this.answers = answers
+
         obtainSelectedAnswer()
         answers.shuffle()
+
+        notifyDataSetChanged()
     }
 
     fun getChosenAnswer(): StoryAnswer? {

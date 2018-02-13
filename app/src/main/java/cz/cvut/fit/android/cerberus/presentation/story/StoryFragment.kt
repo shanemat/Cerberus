@@ -175,7 +175,6 @@ class StoryFragment internal constructor() : Fragment() {
 
     private fun updateAnswers() {
         answerAdapter.setAnswers(currentStoryNode.answers)
-        answerAdapter.notifyDataSetChanged()
     }
 
     private fun updateProgressBer() {
