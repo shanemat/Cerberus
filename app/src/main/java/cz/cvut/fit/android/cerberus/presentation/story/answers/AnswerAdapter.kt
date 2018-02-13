@@ -38,7 +38,7 @@ class AnswerAdapter(context: Context, private var answers: ArrayList<StoryAnswer
             holder = currentView.tag as AnswerItemHolder
         }
 
-        populateHolder(context, holder, answer)
+        populateHolder(holder, answer)
         return currentView!!
     }
 
@@ -63,7 +63,7 @@ class AnswerAdapter(context: Context, private var answers: ArrayList<StoryAnswer
         }
     }
 
-    private fun populateHolder(context: Context, holder: AnswerItemHolder, answer: StoryAnswer) {
+    private fun populateHolder(holder: AnswerItemHolder, answer: StoryAnswer) {
         holder.textView.text = answer.getText(context)
 
         holder.checkBox.setOnCheckedChangeListener { _, isChecked ->
