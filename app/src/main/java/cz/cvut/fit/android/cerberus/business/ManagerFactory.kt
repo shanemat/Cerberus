@@ -13,6 +13,10 @@ object ManagerFactory {
         return GameManager
     }
 
+    fun getPhotoManager(): IPhotoManager {
+        return PhotoManager
+    }
+
     fun getPlayerManager(): IPlayerManager {
         return PlayerManager
     }
