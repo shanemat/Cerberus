@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_team_label">Team: </string>
+    <string name="settings_player_list_header">Team members</string>
+    <string name="settings_controls_header">Controls</string>
+
+    <string name="settings_fetch_players">Fetch players</string>
+    <string name="settings_reset_questions">Reset questions</string>
+    <string name="settings_reset_story">Reset story</string>
+
+    <string name="settings_actualization_text">Last updated on %1$s</string>
+
+    <string name="settings_questions_been_reset">Questions have been reset</string>
+    <string name="settings_story_been_reset">Story has been reset</string>
+    <string name="settings_players_been_fetched">Players have been fetched</string>
+</resources>

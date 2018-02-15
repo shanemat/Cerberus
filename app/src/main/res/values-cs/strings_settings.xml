@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_team_label">Tým: </string>
+    <string name="settings_player_list_header">Členové týmu</string>
+    <string name="settings_controls_header">Ovládání</string>
+
+    <string name="settings_fetch_players">Načti hráče</string>
+    <string name="settings_reset_questions">Resetovat otázky</string>
+    <string name="settings_reset_story">Resetovat příběh</string>
+
+    <string name="settings_actualization_text">Aktualizováno %1$s</string>
+
+    <string name="settings_questions_been_reset">Otázky byly resetovány</string>
+    <string name="settings_story_been_reset">Příběh byl resetován</string>
+    <string name="settings_players_been_fetched">Hráči byli načteni</string>
+</resources>

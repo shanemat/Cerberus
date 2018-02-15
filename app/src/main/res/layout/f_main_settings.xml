@@ -2,17 +2,68 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:orientation="vertical"
+    android:orientation="horizontal"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="0.5"
 
-        android:gravity="center"
+        android:orientation="vertical">
 
-        android:text="Settings fragment"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
+            android:padding="@dimen/standard_padding_medium"
+
+            android:gravity="center"
+            android:background="@color/colorAccent"
+
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/color_white"
+            android:textStyle="bold|italic"
+            android:text="@string/settings_player_list_header"/>
+
+        <ListView
+            android:id="@+id/settingsPlayerListView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:padding="@dimen/standard_padding_medium"
+
+            android:gravity="center"
+            android:background="@color/colorAccent"
+
+            android:textSize="@dimen/text_size_big"
+            android:textColor="@color/color_white"
+            android:textStyle="bold|italic"
+            android:text="@string/settings_controls_header"/>
+
+        <include layout="@layout/fp_settings_control"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
 </LinearLayout>
