@@ -44,6 +44,11 @@ class StoryNodeDAO(context: Context) : DAO(context), IStoryNodeDAO {
         values.putNull(StoryNodeTable.ANSWER_ID)
 
         database.update(StoryNodeTable.TABLE_NAME, values, null, null)
+
+        val preferences = getPreferences()
+        preferences.edit()
+                .putLong(PREFERENCES_STORY_NODE_ID, 0)
+                .apply()
     }
 
     private fun getLong(currentNodeID: Long, columnName: String): Long? {

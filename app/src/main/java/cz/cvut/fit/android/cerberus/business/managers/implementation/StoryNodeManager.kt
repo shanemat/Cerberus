@@ -65,6 +65,9 @@ object StoryNodeManager : IStoryNodeManager {
     override fun resetStory(context: Context) {
         val dao = obtainDAO(context)
         dao.resetStory()
+
+        currentNodeID = 0
+        storyNodes.clear()
     }
 
     private fun obtainDAO(context: Context): IStoryNodeDAO {
