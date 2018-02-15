@@ -12,7 +12,7 @@ import cz.cvut.fit.android.cerberus.presentation.screens.drawer.DrawerItem
 import cz.cvut.fit.android.cerberus.presentation.prototype.dummy.DummyFragment
 import cz.cvut.fit.android.cerberus.presentation.screens.minigames.MiniGamesFragment
 import cz.cvut.fit.android.cerberus.presentation.screens.results.ResultsFragment
-import cz.cvut.fit.android.cerberus.presentation.settings.SettingsFragment
+import cz.cvut.fit.android.cerberus.presentation.screens.settings.SettingsFragment
 import cz.cvut.fit.android.cerberus.presentation.story.StoryFragment
 import cz.cvut.fit.android.cerberus.presentation.screens.team.TeamFragment
 import kotlinx.android.synthetic.main.a_drawer.*

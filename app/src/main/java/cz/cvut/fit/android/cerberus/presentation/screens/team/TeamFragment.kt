@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.business.ManagerFactory
-import cz.cvut.fit.android.cerberus.presentation.screens.team.members.TeamMemberAdapter
+import cz.cvut.fit.android.cerberus.presentation.prototype.players.PlayerAdapter
 import cz.cvut.fit.android.cerberus.presentation.screens.team.photo.TeamPhotoActivity
 import cz.cvut.fit.android.cerberus.structures.enums.PlayerRole
 import cz.cvut.fit.android.cerberus.structures.players.Player
@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.fp_team_questions.*
 class TeamFragment internal constructor() : Fragment() {
 
     private lateinit var questions: ArrayList<String>
-    private lateinit var memberAdapter: TeamMemberAdapter
+    private lateinit var memberAdapter: PlayerAdapter
 
     companion object Creator {
 
@@ -60,7 +60,7 @@ class TeamFragment internal constructor() : Fragment() {
     private fun setUpMembers() {
         val members = obtainTeamMembers()
 
-        memberAdapter = TeamMemberAdapter(activity!!, members)
+        memberAdapter = PlayerAdapter(activity!!, members)
         teamPlayersListView.adapter = memberAdapter
     }
 

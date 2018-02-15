@@ -1,4 +1,4 @@
-package cz.cvut.fit.android.cerberus.presentation.screens.team.members
+package cz.cvut.fit.android.cerberus.presentation.prototype.players
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter
 import cz.cvut.fit.android.cerberus.R
 import cz.cvut.fit.android.cerberus.structures.players.Player
 
-class TeamMemberAdapter(context: Context, private var players: ArrayList<Player>)
+class PlayerAdapter(context: Context, private var players: ArrayList<Player>)
     : ArrayAdapter<Player>(context, 0) {
 
     override fun getCount(): Int {
@@ -16,20 +16,28 @@ class TeamMemberAdapter(context: Context, private var players: ArrayList<Player>
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        return prepareView(position, convertView)
+    }
+
+    override fun getDropDownView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        return prepareView(position, convertView)
+    }
+
+    private fun prepareView(position: Int, convertView: View?): View {
         var currentView = convertView
 
         val teamMember = players[position]
-        val holder: TeamMemberItemHolder
+        val holder: PlayerItemHolder
 
         if (currentView == null) {
             val inflater = LayoutInflater.from(context)
-            currentView = inflater.inflate(R.layout.i_team_member, null)
+            currentView = inflater.inflate(R.layout.i_player, null)
 
-            holder = TeamMemberItemHolder(currentView)
+            holder = PlayerItemHolder(currentView)
             currentView.tag = holder
 
         } else {
-            holder = currentView.tag as TeamMemberItemHolder
+            holder = currentView.tag as PlayerItemHolder
         }
 
         populateHolder(holder, teamMember)
@@ -41,7 +49,7 @@ class TeamMemberAdapter(context: Context, private var players: ArrayList<Player>
         notifyDataSetChanged()
     }
 
-    private fun populateHolder(holder: TeamMemberItemHolder, teamMember: Player) {
+    private fun populateHolder(holder: PlayerItemHolder, teamMember: Player) {
         val name = teamMember.name
         val surname = teamMember.surname
 
