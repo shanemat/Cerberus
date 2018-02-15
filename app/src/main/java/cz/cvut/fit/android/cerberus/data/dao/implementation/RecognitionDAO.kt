@@ -55,6 +55,11 @@ class RecognitionDAO(context: Context) : DAO(context), IRecognitionDAO {
         val values = getValuesFrom(false)
 
         database.update(RecognitionTable.TABLE_NAME, values, null, null)
+
+        val preferences = getPreferences()
+        preferences.edit()
+                .putInt(PREFERENCES_QUESTION_ID, 1)
+                .apply()
     }
 
     private fun getValuesFrom(answered: Boolean): ContentValues {

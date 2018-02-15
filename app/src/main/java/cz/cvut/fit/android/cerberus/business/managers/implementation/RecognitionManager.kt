@@ -59,6 +59,7 @@ object RecognitionManager : IRecognitionManager {
         val dao = obtainDAO(context)
         dao.resetAll()
 
+        currentQuestion = 1
         for (key in questions.keys) {
             questions[key] = false
         }
