@@ -12,7 +12,7 @@ object PlayerManager : IPlayerManager {
     private val team = HashMap<PlayerRole, Player>()
 
     private var teamID: Long = 1
-    private var isNotCached = false
+    private var isNotCached = true
 
     override fun fetchPlayers(context: Context) {
         // TODO implement fetching players via network from web APP
@@ -26,6 +26,13 @@ object PlayerManager : IPlayerManager {
         loadCurrentIfNecessary(dao)
 
         return team[role]
+    }
+
+    override fun getTeamID(context: Context): Long {
+        val dao = obtainDAO(context)
+        loadCurrentIfNecessary(dao)
+
+        return teamID
     }
 
     override fun getTeam(context: Context): HashMap<PlayerRole, Player> {

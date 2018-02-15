@@ -10,6 +10,8 @@ interface IPlayerManager {
 
     fun getPlayer(context: Context, role: PlayerRole): Player?
 
+    fun getTeamID(context: Context): Long
+
     fun getTeam(context: Context): HashMap<PlayerRole, Player>
 
     fun setCurrentTeam(context: Context, teamID: Long)
